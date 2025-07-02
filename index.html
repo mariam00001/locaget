@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/madia.css" />
+    <title>LocaGet</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container-fluid ps-0">
+        <div class="row">
+          <div class="col-md-1">
+            <!-- Sidebar -->
+            <nav class="sidebar position-relative">
+              <ul class="sidebar-menu">
+              <a href="./index.html"><li><img src="./assets/L LOGO.svg" alt="logo" /></li></a>  
+                <li class="mt-3">
+                  <a href="./index.html" class="active"
+                    ><img src="./assets/dashboard-square-01.svg" alt="category"
+                  /></a>
+                </li>
+                <li>
+                  <a href="./upload.html"
+                    ><img src="./assets/document-text.svg" alt="text"
+                  /></a>
+                </li>
+                <li>
+                  <a href="./dochistory.html"><img src="./assets/verify.svg" alt="verify" /></a>
+                </li>
+                <li>
+                  <a href=""
+                    ><img src="./assets/rotate-left.svg" alt="rotate-left"
+                  /></a>
+                </li>
+                <li>
+                  <a href=""
+                    ><img src="./assets/setting-2.svg" alt="setting-2"
+                  /></a>
+                </li>
+                <div class="d-flex justify-content-center">
+                  <div class="position-absolute logo-slider">
+                    <li>
+                      <a href=""
+                        ><img src="./assets/help-circle.svg" alt="help-circle"
+                      /></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><img src="./assets/elements.svg" alt="elements"
+                      /></a>
+                    </li>
+                  </div>
+                </div>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="col-md-11">
+            <!-- Main Content -->
+            <div class="main-content">
+              <img src="./assets/Logo 2.svg" class="mt-4 mt-md-3 ms-3 ms-md-0" alt="LocGet" />
+              <!-- Header -->
+              <header
+                class="header d-md-flex justify-content-between align-items-center"
+              >
+                <div class="header-left">
+                  <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search" />
+                  </div>
+                </div>
+                <div class="header-right mt-lg-0 mt-5">
+                  <img src="./assets/Logo.svg" alt="logo" />
+                  <div class="notification-badge">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge">5</span>
+                  </div>
+                  <div class="user-avatar ps-2">
+                    <img
+                      src="./assets/97baf907c0c14b0ffd910004086ee5821fbb6b33.jpg"
+                      alt="User"
+                    />
+                    <div class="user-info">
+                      <span class="name">Jacob Mohamed</span>
+                      <span class="role">CEO</span>
+                    </div>
+                    <i class="fa-solid fa-caret-down"></i>
+                  </div>
+                </div>
+              </header>
+
+              <div class="mt-3">
+                <!-- Overview Section -->
+                <div class="overview-section">
+                  <h2>Overview</h2>
+                  <div class="stats-grid">
+                    <div class="stat-card red">
+                      <div class="stat-icon">
+                        <i class="fa-solid fa-file"></i>
+                      </div>
+                      <div class="stat-content">
+                        <div class="d-flex justify-content-between">
+                          <h3>2,671</h3>
+                          <span class="stat-change"
+                            >+11.01% <i class="fa-solid fa-arrow-trend-up"></i
+                          ></span>
+                        </div>
+                        <p>All Documents</p>
+                      </div>
+                    </div>
+
+                    <div class="stat-card blue">
+                      <div class="stat-icon">
+                        <i class="fa-solid fa-user-group"></i>
+                      </div>
+                      <div class="stat-content">
+                        <div class="d-flex justify-content-between">
+                          <h3>5,501</h3>
+                          <span class="stat-change"
+                            >+11.01% <i class="fa-solid fa-arrow-trend-up"></i
+                          ></span>
+                        </div>
+                        <p>Visits</p>
+                      </div>
+                    </div>
+
+                    <div class="stat-card green">
+                      <div class="stat-icon">
+                        <i class="fas fa-check-circle"></i>
+                      </div>
+                      <div class="stat-content">
+                        <div class="d-flex justify-content-between">
+                          <h3>1,071</h3>
+                          <span class="stat-change"
+                            >-0.01% <i class="fa-solid fa-arrow-trend-down"></i
+                          ></span>
+                        </div>
+                        <p>Approved</p>
+                      </div>
+                    </div>
+
+                    <div class="stat-card yellow">
+                      <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                      </div>
+                      <div class="stat-content">
+                        <div class="d-flex justify-content-between">
+                          <h3>1,571</h3>
+                          <span class="stat-change"
+                            >-0.01% <i class="fa-solid fa-arrow-trend-down"></i
+                          ></span>
+                        </div>
+                        <p>Pending</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Main Dashboard Content -->
+                <div class="row">
+                  <div class="col-lg-6 col-md-12">
+                    <div class="left-column">
+                      <!-- Categories Section -->
+                      <div class="categories-section">
+                        <div class="section-header">
+                          <h3>All Categories</h3>
+                          <a href="#" class="view-all">View all <i class="fa-solid fa-angle-right"></i></a>
+                        </div>
+
+                        <div class="row archive gy-3">
+                          <div class="col-md-6">
+                            <div class="border p-4 rounded-2">
+                              <div class="d-flex justify-content-between">
+                                <img src="./assets/Group 634.svg" alt="" />
+                                <div class="d-flex">
+                                  <h5 class="d-flex mt-1">
+                                    <div class="color-pending me-2 mt-1"></div>
+                                    Pending
+                                  </h5>
+                                  <p class="ms-2">25</p>
+                                </div>
+                              </div>
+
+                              <h3 class="mt-3">Archives</h3>
+                              <div class="d-flex align-items-center mt-2">
+                                <div
+                                  class="progress"
+                                  style="
+                                    width: 100%;
+                                    height: 8px;
+                                    background-color: #eee;
+                                    border-radius: 10px;
+                                  "
+                                >
+                                  <div
+                                    class="progress-bar"
+                                    role="progressbar"
+                                    style="
+                                      width: 100%;
+                                      border-radius: 10px;
+                                      background-color: #f0d672;
+                                    "
+                                    aria-valuenow="100"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                  ></div>
+                                </div>
+                                <span class="ms-2">100</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="border p-4 rounded-2">
+                              <div class="d-flex justify-content-between">
+                                <img src="./assets/Group 6.svg" alt="" />
+                                <div class="d-flex">
+                                  <h5 class="d-flex mt-1">
+                                    <div
+                                      class="color-pending red-pending me-2 mt-1"
+                                    ></div>
+                                    Pending
+                                  </h5>
+                                  <p class="ms-2">40</p>
+                                </div>
+                              </div>
+
+                              <h3 class="mt-3">Finance</h3>
+                              <div class="d-flex align-items-center mt-2">
+                                <div
+                                  class="progress"
+                                  style="
+                                    width: 100%;
+                                    height: 8px;
+                                    background-color: #eee;
+                                    border-radius: 10px;
+                                  "
+                                >
+                                  <div
+                                    class="progress-bar"
+                                    role="progressbar"
+                                    style="
+                                      width: 100%;
+                                      border-radius: 10px;
+                                      background-color: #e63946;
+                                    "
+                                    aria-valuenow="100"
+                                    aria-valuemin="0"
+                                    aria-valuemax="400"
+                                  ></div>
+                                </div>
+                                <span class="ms-2">400</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="border p-4 rounded-2">
+                              <div class="d-flex justify-content-between">
+                                <img src="./assets/Clip path group.svg" alt="" />
+                                <div class="d-flex">
+                                  <h5 class="d-flex mt-1">
+                                    <div class="color-pending blue-pending me-2 mt-1"></div>
+                                    Pending
+                                  </h5>
+                                  <p class="ms-2">40</p>
+                                </div>
+                              </div>
+
+                              <h3 class="mt-3">Marketing</h3>
+                              <div class="d-flex align-items-center mt-2">
+                                <div
+                                  class="progress"
+                                  style="
+                                    width: 100%;
+                                    height: 8px;
+                                    background-color: #0c0a0a;
+                                    border-radius: 10px;
+                                  "
+                                >
+                                  <div
+                                    class="progress-bar"
+                                    role="progressbar"
+                                    style="
+                                      width: 100%;
+                                      border-radius: 10px;
+                                      background-color: #68A0FD;
+                                    "
+                                    aria-valuenow="100"
+                                    aria-valuemin="0"
+                                    aria-valuemax="100"
+                                  ></div>
+                                </div>
+                                <span class="ms-2">350</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="border p-4 rounded-2">
+                              <div class="d-flex justify-content-between">
+                                <img src="./assets/Group 8.svg" alt="" />
+                                <div class="d-flex">
+                                  <h5 class="d-flex mt-1">
+                                    <div
+                                      class="color-pending green-pending me-2 mt-1"
+                                    ></div>
+                                    Pending
+                                  </h5>
+                                  <p class="ms-2">50</p>
+                                </div>
+                              </div>
+
+                              <h3 class="mt-3">Sales </h3>
+                              <div class="d-flex align-items-center mt-2">
+                                <div
+                                  class="progress"
+                                  style="
+                                    width: 100%;
+                                    height: 8px;
+                                    background-color: #eee;
+                                    border-radius: 10px;
+                                  "
+                                >
+                                  <div
+                                    class="progress-bar"
+                                    role="progressbar"
+                                    style="
+                                      width: 100%;
+                                      border-radius: 10px;
+                                      background-color: #47A778;
+                                    "
+                                    aria-valuenow="100"
+                                    aria-valuemin="0"
+                                    aria-valuemax="400"
+                                  ></div>
+                                </div>
+                                <span class="ms-2">771</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Pagination -->
+                        <div class="pagination">
+                            <a href="" class="left-pagination page-num"><i class="fa-solid fa-angle-left"></i></a>
+                          <span class="page-info pagenation-active">1</span>
+                          <a href="#" class="page-num">2</a>
+                          <a href="#" class="page-num">3</a>
+                          <span class="page-dots">...</span>
+                          <a href="#" class="page-num">6</a>
+                          <a href="#" class="page-num">7</a>
+                           <a href="" class="left-pagination page-num"><i class="fa-solid fa-chevron-right"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-12 mt-5 mt-lg-0">
+                    <!-- Right Column -->
+                    <div class="card border-0  categories-section p-4 h-100">
+                     <div class="d-flex justify-content-between align-items-start flex-wrap mb-5">
+    <div>
+      <p class="text-muted mb-1 fw-semibold">Statistics</p>
+      <h5 class="fw-bold">Summary of Approvals</h5>
+    </div>
+    <div class="btn-group mb-2">
+      <button class="  me-4 ">Weekly</button>
+      <button class=" me-4 button-active">Monthly</button>
+      <button >Yearly</button>
+    </div>
+                     </div>
+
+                   <div class="row  h-100">
+    <div class="col-md-9">
+      <div style="height:100%">
+        <canvas id="approvalChart"></canvas>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="border rounded-pill px-3 py-1 d-inline-block mb-2">
+        <i class="bi bi-circle-fill text-secondary me-1" style="font-size: 0.6rem;"></i> All Status
+      </div>
+      <ul class="list-unstyled mt-3">
+        <li class="d-flex justify-content-between align-items-center mb-2">
+          <div class="d-flex align-items-center gap-2">
+            <span class="bg-success rounded-circle d-inline-block" style="width: 10px; height: 10px;"></span>
+            <span>Approved</span>
+          </div>
+          <span class="fw-semibold">37</span>
+        </li>
+        <li class="d-flex justify-content-between align-items-center mb-2">
+          <div class="d-flex align-items-center gap-2">
+            <span class="bg-warning rounded-circle d-inline-block" style="width: 10px; height: 10px;"></span>
+            <span>Pending</span>
+          </div>
+          <span class="fw-semibold">40</span>
+        </li>
+        <li class="d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center gap-2">
+            <span class="bg-danger rounded-circle d-inline-block" style="width: 10px; height: 10px;"></span>
+            <span>Rejected</span>
+          </div>
+          <span class="fw-semibold">23</span>
+        </li>
+      </ul>
+    </div>
+                    </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="dashboard-content">
+                  <!-- Left Column -->
+                </div>
+
+                <!-- Recent Files Section -->
+                <div class="recent-files-section">
+                  <div class="section-header">
+                    
+                    <h3><img src="./assets/rotate-left.svg" alt="rotate-left" >Recent Files</h3>
+                    <div class="section-actions">
+                        <i class="fa-solid fa-sliders align-self-center"></i>
+                      <button class="btn-export">
+                        <i class="fa-solid fa-arrow-up-from-bracket" style="color: #E63946;"></i> Export
+                      </button>
+                      <button class="btn-upload">
+                        <i class="fas fa-plus"></i> Upload Documents
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="files-table-container">
+                    <div class="table-controls">
+                      <div class="search-files">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search by name" />
+                      </div>
+                      <div class="table-filters">
+                        <select class="form-select">
+                          <option>Status</option>
+                          <option>Approved</option>
+                          <option>Pending</option>
+                          <option>Rejected</option>
+                        </select>
+                        <select class="form-select">
+                          <option>File Type</option>
+                          <option>PDF</option>
+                          <option>DOC</option>
+                          <option>XLS</option>
+                        </select>
+                        <select class="form-select">
+                          <option>Date</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <table class="files-table">
+                      <thead>
+                        <tr>
+                          <th><input type="checkbox" /></th>
+                          <th>File Name</th>
+                          <th>Publish</th>
+                          <th>Status</th>
+                          <th class="d-flex justify-content-center">Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody id="filesTableBody">
+                        <!-- Files will be populated by JavaScript -->
+                      </tbody>
+                    </table>
+
+                    <div class="table-footer">
+
+                      <span>Showing Results 2 - 7 of 07</span>
+                      <div class="table-pagination">
+                        <button class="btn-page"><i class="fa-solid fa-chevron-left"></i> Back</button>
+                        <span class="page-num active">1</span>
+                        <span class="page-num">2</span>
+                        <span class="page-num">3</span>
+                        <span class="page-num">4</span>
+                        <button class="btn-page">Next <i class="fa-solid fa-chevron-right"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/counter.js"></script>
+    <script src="./js/chart.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
