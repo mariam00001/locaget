@@ -20,8 +20,11 @@
           <div class="col-md-1">
             <!-- Sidebar -->
             <nav class="sidebar position-relative">
+              <a href="./index.html" class="text-decoration-none text-center mb-3"
+                  ><li class="text-decoration-none list-unstyled "><img src="./assets/L LOGO.svg" alt="logo" /></li
+                ></a>
               <ul class="sidebar-menu">
-              <a href="./index.html"><li><img src="./assets/L LOGO.svg" alt="logo" /></li></a>  
+                
                 <li class="mt-3">
                   <a href="./index.html" class="active"
                     ><img src="./assets/dashboard-square-01.svg" alt="category"
@@ -33,7 +36,9 @@
                   /></a>
                 </li>
                 <li>
-                  <a href="./dochistory.html"><img src="./assets/verify.svg" alt="verify" /></a>
+                  <a href="./dochistory.html"
+                    ><img src="./assets/verify.svg" alt="verify"
+                  /></a>
                 </li>
                 <li>
                   <a href=""
@@ -66,7 +71,11 @@
           <div class="col-md-11">
             <!-- Main Content -->
             <div class="main-content">
-              <img src="./assets/Logo 2.svg" class="mt-4 mt-md-3 ms-3 ms-md-0" alt="LocGet" />
+              <img
+                src="./assets/Logo 2.svg"
+                class="mt-4 mt-md-3 ms-3 ms-md-0"
+                alt="LocGet"
+              />
               <!-- Header -->
               <header
                 class="header d-md-flex justify-content-between align-items-center"
@@ -77,7 +86,7 @@
                     <input type="text" placeholder="Search" />
                   </div>
                 </div>
-                <div class="header-right mt-lg-0 mt-5">
+                <div class="header-right mt-lg-0 mt-5 position-relative">
                   <img src="./assets/Logo.svg" alt="logo" />
                   <div class="notification-badge">
                     <i class="fas fa-bell"></i>
@@ -86,20 +95,71 @@
                   <div class="user-avatar ps-2">
                     <img
                       src="./assets/97baf907c0c14b0ffd910004086ee5821fbb6b33.jpg"
+                      class="user"
                       alt="User"
                     />
-                    <div class="user-info">
-                      <span class="name">Jacob Mohamed</span>
-                      <span class="role">CEO</span>
+                    <div class=" d-flex justify-content-between ">
+                      <div class="user-info me-2">
+                        <span class="name">Jacob Mohamed</span>
+                        <span class="role">CEO</span>
+                      </div>
+                      <i class="fa-solid fa-caret-down"  id="toggleDropdown"></i>
+                      <div class="postion-relative">
+                      <div class="pop p-4 d-none"  id="dropdownMenu">
+                        <div class="d-flex align-items-center">
+                          <img
+                            src="./assets/97baf907c0c14b0ffd910004086ee5821fbb6b33.jpg"
+                            alt=""
+                          />
+                          <div class="ms-3">
+                            <h3>Jacob Mohamed</h3>
+                            <h4>Jacob123mo@gmail.com</h4>
+                          </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-3 mb-2">
+                          <h6><i class="fa-solid fa-user me-2" style="color: #9E9E9E;"></i>My Profile</h6>
+                          <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                          <h6><i class="fa-solid fa-earth-americas me-2" style="color: #9E9E9E;"></i>English(U.S)</h6>
+                          <i class="fa-solid fa-chevron-right" id="toggleDropdown2"></i>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                          <h6><i class="fa-solid fa-circle-info me-2" style="color: #9E9E9E;"></i>Help</h6>
+                          <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                      </div>
+                      <div class="language p-4 d-none" id="dropdownMenu2">
+                        <h3 class="mb-3"><i class="fa-solid fa-angle-left me-2" id="closeLanguage" style="color: #9E9E9E;"></i>Change Language </h3>
+                        <div class="">
+                          <div class="d-flex justify-content-between mb-2">
+                              <h6><img src="./assets/Flags.svg" class="me-2" alt="">French</h6>
+                              <input type="checkbox" class="form-check-input ms-2" >
+                          </div>
+                          <div class="d-flex justify-content-between mb-2">
+                               <h6><img src="./assets/Flags (1).svg" class="me-2" alt="">English(U.S)</h6>
+                              <input type="checkbox" class="form-check-input ms-2" >
+                          </div>
+                          <div class="d-flex justify-content-between mb-2">
+                          <h6><img src="./assets/Flags (2).svg" class="me-2" alt="">Arabic </h6>
+                              <input type="checkbox" class="form-check-input ms-2" >
+                          </div>
+                        
+                         
+
+                        </div>
+
+                        
+                      </div>
+                      </div>
                     </div>
-                    <i class="fa-solid fa-caret-down"></i>
                   </div>
                 </div>
               </header>
 
               <div class="mt-3">
                 <!-- Overview Section -->
-                <div class="overview-section">
+                <div class="overview-section px-3 px-md-0">
                   <h2>Overview</h2>
                   <div class="stats-grid">
                     <div class="stat-card red">
@@ -172,7 +232,9 @@
                       <div class="categories-section">
                         <div class="section-header">
                           <h3>All Categories</h3>
-                          <a href="#" class="view-all">View all <i class="fa-solid fa-angle-right"></i></a>
+                          <a href="#" class="view-all"
+                            >View all <i class="fa-solid fa-angle-right"></i
+                          ></a>
                         </div>
 
                         <div class="row archive gy-3">
@@ -263,10 +325,15 @@
                           <div class="col-md-6">
                             <div class="border p-4 rounded-2">
                               <div class="d-flex justify-content-between">
-                                <img src="./assets/Clip path group.svg" alt="" />
+                                <img
+                                  src="./assets/Clip path group.svg"
+                                  alt=""
+                                />
                                 <div class="d-flex">
                                   <h5 class="d-flex mt-1">
-                                    <div class="color-pending blue-pending me-2 mt-1"></div>
+                                    <div
+                                      class="color-pending blue-pending me-2 mt-1"
+                                    ></div>
                                     Pending
                                   </h5>
                                   <p class="ms-2">40</p>
@@ -290,7 +357,7 @@
                                     style="
                                       width: 100%;
                                       border-radius: 10px;
-                                      background-color: #68A0FD;
+                                      background-color: #68a0fd;
                                     "
                                     aria-valuenow="100"
                                     aria-valuemin="0"
@@ -316,7 +383,7 @@
                                 </div>
                               </div>
 
-                              <h3 class="mt-3">Sales </h3>
+                              <h3 class="mt-3">Sales</h3>
                               <div class="d-flex align-items-center mt-2">
                                 <div
                                   class="progress"
@@ -333,7 +400,7 @@
                                     style="
                                       width: 100%;
                                       border-radius: 10px;
-                                      background-color: #47A778;
+                                      background-color: #47a778;
                                     "
                                     aria-valuenow="100"
                                     aria-valuemin="0"
@@ -348,70 +415,96 @@
 
                         <!-- Pagination -->
                         <div class="pagination">
-                            <a href="" class="left-pagination page-num"><i class="fa-solid fa-angle-left"></i></a>
+                          <a href="" class="left-pagination page-num"
+                            ><i class="fa-solid fa-angle-left"></i
+                          ></a>
                           <span class="page-info pagenation-active">1</span>
                           <a href="#" class="page-num">2</a>
                           <a href="#" class="page-num">3</a>
                           <span class="page-dots">...</span>
                           <a href="#" class="page-num">6</a>
                           <a href="#" class="page-num">7</a>
-                           <a href="" class="left-pagination page-num"><i class="fa-solid fa-chevron-right"></i></a>
+                          <a href="" class="left-pagination page-num"
+                            ><i class="fa-solid fa-chevron-right"></i
+                          ></a>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="col-lg-6 col-md-12 mt-5 mt-lg-0">
                     <!-- Right Column -->
-                    <div class="card border-0  categories-section p-4 h-100">
-                     <div class="d-flex justify-content-between align-items-start flex-wrap mb-5">
-    <div>
-      <p class="text-muted mb-1 fw-semibold">Statistics</p>
-      <h5 class="fw-bold">Summary of Approvals</h5>
-    </div>
-    <div class="btn-group mb-2">
-      <button class="  me-4 ">Weekly</button>
-      <button class=" me-4 button-active">Monthly</button>
-      <button >Yearly</button>
-    </div>
-                     </div>
+                    <div class="card border-0 categories-section p-4 h-100">
+                      <div
+                        class="d-flex justify-content-between align-items-start flex-wrap mb-5"
+                      >
+                        <div>
+                          <p class="text-muted mb-1 fw-semibold">Statistics</p>
+                          <h5 class="fw-bold">Summary of Approvals</h5>
+                        </div>
+                        <div class="btn-group mb-2">
+                          <button class="me-4">Weekly</button>
+                          <button class="me-4 button-active">Monthly</button>
+                          <button>Yearly</button>
+                        </div>
+                      </div>
 
-                   <div class="row  h-100">
-    <div class="col-md-9">
-      <div style="height:100%">
-        <canvas id="approvalChart"></canvas>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="border rounded-pill px-3 py-1 d-inline-block mb-2">
-        <i class="bi bi-circle-fill text-secondary me-1" style="font-size: 0.6rem;"></i> All Status
-      </div>
-      <ul class="list-unstyled mt-3">
-        <li class="d-flex justify-content-between align-items-center mb-2">
-          <div class="d-flex align-items-center gap-2">
-            <span class="bg-success rounded-circle d-inline-block" style="width: 10px; height: 10px;"></span>
-            <span>Approved</span>
-          </div>
-          <span class="fw-semibold">37</span>
-        </li>
-        <li class="d-flex justify-content-between align-items-center mb-2">
-          <div class="d-flex align-items-center gap-2">
-            <span class="bg-warning rounded-circle d-inline-block" style="width: 10px; height: 10px;"></span>
-            <span>Pending</span>
-          </div>
-          <span class="fw-semibold">40</span>
-        </li>
-        <li class="d-flex justify-content-between align-items-center">
-          <div class="d-flex align-items-center gap-2">
-            <span class="bg-danger rounded-circle d-inline-block" style="width: 10px; height: 10px;"></span>
-            <span>Rejected</span>
-          </div>
-          <span class="fw-semibold">23</span>
-        </li>
-      </ul>
-    </div>
+                      <div class="row h-100">
+                        <div class="col-md-9">
+                          <div style="height: 100%">
+                            <canvas id="approvalChart"></canvas>
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div
+                            class="border rounded-pill px-3 py-1 d-inline-block mb-2"
+                          >
+                            <i
+                              class="bi bi-circle-fill text-secondary me-1"
+                              style="font-size: 0.6rem"
+                            ></i>
+                            All Status
+                          </div>
+                          <ul class="list-unstyled mt-3">
+                            <li
+                              class="d-flex justify-content-between align-items-center mb-2"
+                            >
+                              <div class="d-flex align-items-center gap-2">
+                                <span
+                                  class="bg-success rounded-circle d-inline-block"
+                                  style="width: 10px; height: 10px"
+                                ></span>
+                                <span>Approved</span>
+                              </div>
+                              <span class="fw-semibold">37</span>
+                            </li>
+                            <li
+                              class="d-flex justify-content-between align-items-center mb-2"
+                            >
+                              <div class="d-flex align-items-center gap-2">
+                                <span
+                                  class="bg-warning rounded-circle d-inline-block"
+                                  style="width: 10px; height: 10px"
+                                ></span>
+                                <span>Pending</span>
+                              </div>
+                              <span class="fw-semibold">40</span>
+                            </li>
+                            <li
+                              class="d-flex justify-content-between align-items-center"
+                            >
+                              <div class="d-flex align-items-center gap-2">
+                                <span
+                                  class="bg-danger rounded-circle d-inline-block"
+                                  style="width: 10px; height: 10px"
+                                ></span>
+                                <span>Rejected</span>
+                              </div>
+                              <span class="fw-semibold">23</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
-                    </div>
-
                   </div>
                 </div>
                 <div class="dashboard-content">
@@ -421,12 +514,20 @@
                 <!-- Recent Files Section -->
                 <div class="recent-files-section">
                   <div class="section-header">
-                    
-                    <h3><img src="./assets/rotate-left.svg" alt="rotate-left" >Recent Files</h3>
+                    <h3>
+                      <img
+                        src="./assets/rotate-left.svg"
+                        alt="rotate-left"
+                      />Recent Files
+                    </h3>
                     <div class="section-actions">
-                        <i class="fa-solid fa-sliders align-self-center"></i>
+                      <i class="fa-solid fa-sliders align-self-center"></i>
                       <button class="btn-export">
-                        <i class="fa-solid fa-arrow-up-from-bracket" style="color: #E63946;"></i> Export
+                        <i
+                          class="fa-solid fa-arrow-up-from-bracket"
+                          style="color: #e63946"
+                        ></i>
+                        Export
                       </button>
                       <button class="btn-upload">
                         <i class="fas fa-plus"></i> Upload Documents
@@ -475,15 +576,18 @@
                     </table>
 
                     <div class="table-footer">
-
                       <span>Showing Results 2 - 7 of 07</span>
                       <div class="table-pagination">
-                        <button class="btn-page"><i class="fa-solid fa-chevron-left"></i> Back</button>
+                        <button class="btn-page">
+                          <i class="fa-solid fa-chevron-left"></i> Back
+                        </button>
                         <span class="page-num active">1</span>
                         <span class="page-num">2</span>
                         <span class="page-num">3</span>
                         <span class="page-num">4</span>
-                        <button class="btn-page">Next <i class="fa-solid fa-chevron-right"></i></button>
+                        <button class="btn-page">
+                          Next <i class="fa-solid fa-chevron-right"></i>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -495,9 +599,52 @@
       </div>
     </div>
 
+
+
+    <script>
+         const toggleIcon = document.getElementById("toggleDropdown");
+  const dropdown = document.getElementById("dropdownMenu");
+
+  toggleIcon.addEventListener("click", function () {
+    dropdown.classList.toggle("d-none");
+  });
+
+  document.addEventListener("click", function (event) {
+    if (!toggleIcon.contains(event.target) && !dropdown.contains(event.target)) {
+      dropdown.classList.add("d-none");
+    }
+  });
+const toggleIcon2 = document.getElementById("toggleDropdown2");
+const dropdown2 = document.getElementById("dropdownMenu2");
+const closeLanguageBtn = document.getElementById("closeLanguage"); 
+
+toggleIcon2.addEventListener("click", function () {
+  dropdown2.classList.toggle("d-none");
+});
+
+closeLanguageBtn.addEventListener("click", function (event) {
+  dropdown2.classList.add("d-none"); 
+  event.stopPropagation(); 
+});
+
+document.addEventListener("click", function (event) {
+  if (
+    !toggleIcon2.contains(event.target) &&
+    !dropdown2.contains(event.target)
+  ) {
+    dropdown2.classList.add("d-none");
+  }
+});
+
+
+</script>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./js/counter.js"></script>
     <script src="./js/chart.js"></script>
     <script src="./js/main.js"></script>
+   <script src="./js/pop.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
   </body>
 </html>

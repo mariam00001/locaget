@@ -68,4 +68,10 @@
   .files-table-container {
     overflow-x: scroll;
   }
+  .language{
+
+  left: 0%;
+    top: 500%;
+  z-index: 1000;
+}
 }

@@ -22,7 +22,6 @@ body {
   min-height: 120vh;
 }
 
-
 .sidebar-header {
   text-align: center;
   margin-bottom: 30px;
@@ -74,7 +73,6 @@ body {
 .logo-slider {
   bottom: 0;
 }
-
 
 /* Header */
 .header {
@@ -149,18 +147,79 @@ body {
   gap: 10px;
 }
 
-.user-avatar img {
+.user {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   object-fit: cover;
 }
+.language h3{
+font-weight: 500;
+font-style: Medium;
+font-size: 14px;
+leading-trim: NONE;
+line-height: 150%;
+letter-spacing: 0.5%;
+color: #2A2A2E;
+}
 
+.pop {
+  background-color: white;
+  box-shadow: 0px 0px 8px 0px #00000026;
+  width: 18.94rem;
+  height: 13.125rem;
+  border-radius: 0.5rem;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 999;
+}
+.language{
+    background-color: white;
+  box-shadow: 0px 0px 8px 0px #00000026;
+width: 18.94rem;
+height: 10.625rem;
+border-radius: 0.5rem;
+  position: absolute;
+  left: -50%;
+    top: 500%;
+  z-index: 1000;
+}
+.pop img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.pop h6{
+font-weight: 400;
+font-size: 14px;
+line-height: 150%;
+letter-spacing: 0%;
+color: #9E9E9E;
+}
 .user-info {
   display: flex;
   flex-direction: column;
 }
+.pop h3{
+  color: #1D1F2C;
+font-weight: 500;
+font-style: Medium;
+font-size: 14px;
+leading-trim: NONE;
+line-height: 20px;
+letter-spacing: 0.5%;
 
+}
+.pop h4{
+font-weight: 500;
+font-style: Medium;
+font-size: 12px;
+line-height: 18px;
+letter-spacing: 0.5%;
+color: #4A4C56;
+}
 .user-info .name {
   font-weight: 600;
   font-size: 14px;
@@ -173,7 +232,6 @@ body {
 }
 
 /* Content Wrapper */
-
 
 /* Overview Section */
 .overview-section {
@@ -532,9 +590,16 @@ body {
 .legend-color.approved {
   background-color: #28a745;
 }
-
+.Employee {
+  background: #498cfc;
+  color: #bfd7ff;
+}
 .legend-color.rejected {
   background-color: #dc3545;
+}
+.Admin {
+  background: #e95964;
+  color: #faeaeb;
 }
 
 .legend-item .count {
@@ -769,10 +834,11 @@ body {
 }
 
 .files-table th {
-  background-color: #f8f9fa;
+  background-color: #edf1f4;
   font-weight: 600;
   color: #1a202c;
   font-size: 14px;
+  padding: 20px 8px;
 }
 
 .files-table td {
@@ -1210,4 +1276,129 @@ body {
 .rounded-checkbox:checked {
   background-color: #28a745;
   border-color: #28a745;
+}
+
+.bord {
+  border: 0.2px solid #9e9e9e;
+  background: #ffffff;
+  border-radius: 8px;
+}
+.activity-step {
+  position: relative;
+  padding-left: 40px;
+  padding-bottom: 40px;
+}
+
+.icon-box {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  border-radius: 50%;
+
+  width: 3rem;
+  height: 3rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bord-color {
+  border: 2px solid #198754;
+  background: #198754;
+  color: white;
+}
+
+.activity-step i {
+  color: #6e6d6d;
+}
+.bord-color i {
+  color: white;
+}
+.activity-meta {
+  font-size: 14px;
+  color: #6c757d;
+}
+.activity-user {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+.activity-user img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.activity-role {
+  font-size: 14px;
+  color: #6c757d;
+}
+.icon-box::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 5.5rem;
+  background: repeating-linear-gradient(
+    to bottom,
+    #ccc,
+    #ccc 4px,
+    transparent 4px,
+    transparent 8px
+  );
+}
+
+.activity-step:last-child .icon-box::after {
+  display: none;
+}
+
+.btn-group2 {
+  background: #f8f8ff;
+  padding: 10px;
+  border-radius: 15px;
+}
+.btn-group2 button {
+  border: none;
+  background-color: transparent;
+  border-radius: 15px;
+  color: #000000;
+}
+.btn-group2 button a {
+  color: #000000;
+}
+.button-active2 {
+  background-color: #000000 !important;
+  padding: 10px;
+}
+.button-active2 a {
+  color: white !important;
+}
+.btn-log {
+  background: #e6e6e6;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+}
+.sales-color {
+  color: #098f4d;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 31.38px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+.markting-color {
+  color: #498cfc;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 31.38px;
+  letter-spacing: 0px;
+  text-align: center;
 }

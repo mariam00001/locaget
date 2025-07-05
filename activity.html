@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/madia.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container-fluid ps-0">
+        <div class="row">
+          <div class="col-md-1">
+            <!-- Sidebar -->
+            <nav class="sidebar position-relative">
+               <a href="./index.html" class="text-decoration-none text-center mb-3"
+                  ><li class="text-decoration-none list-unstyled "><img src="./assets/L LOGO.svg" alt="logo" /></li
+                ></a>
+              <ul class="sidebar-menu">
+                <li class="mt-3">
+                  <a href="./index.html"
+                    ><img src="./assets/dashboard-square-01.svg" alt="category"
+                  /></a>
+                </li>
+                <li>
+                  <a href="./upload.html"
+                    ><img src="./assets/document-text.svg" alt="text"
+                  /></a>
+                </li>
+                <li>
+                  <a href="./dochistory.html" class="active"
+                    ><img src="./assets/verify.svg" alt="verify"
+                  /></a>
+                </li>
+                <li>
+                  <a href="./activitylog.html"
+                    ><img src="./assets/rotate-left.svg" alt="rotate-left"
+                  /></a>
+                </li>
+                <li>
+                  <a href=""
+                    ><img src="./assets/setting-2.svg" alt="setting-2"
+                  /></a>
+                </li>
+                <div class="d-flex justify-content-center">
+                  <div class="position-absolute logo-slider">
+                    <li>
+                      <a href=""
+                        ><img src="./assets/help-circle.svg" alt="help-circle"
+                      /></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><img src="./assets/elements.svg" alt="elements"
+                      /></a>
+                    </li>
+                  </div>
+                </div>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="col-md-11">
+            <img
+              src="./assets/Logo 2.svg"
+              class="mt-4 mt-md-3 ms-3 ms-md-0"
+              alt="LocGet"
+            />
+            <!-- Header -->
+             <header
+                class="header d-md-flex justify-content-between align-items-center"
+              >
+                <div class="header-left">
+                  <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search" />
+                  </div>
+                </div>
+                <div class="header-right mt-lg-0 mt-5 position-relative">
+                  <img src="./assets/Logo.svg" alt="logo" />
+                  <div class="notification-badge">
+                    <i class="fas fa-bell"></i>
+                    <span class="badge">5</span>
+                  </div>
+                  <div class="user-avatar ps-2">
+                    <img
+                      src="./assets/97baf907c0c14b0ffd910004086ee5821fbb6b33.jpg"
+                      class="user"
+                      alt="User"
+                    />
+                    <div class=" d-flex justify-content-between ">
+                      <div class="user-info me-2">
+                        <span class="name">Jacob Mohamed</span>
+                        <span class="role">CEO</span>
+                      </div>
+                      <i class="fa-solid fa-caret-down"  id="toggleDropdown"></i>
+                      <div class="postion-relative">
+                      <div class="pop p-4 d-none"  id="dropdownMenu">
+                        <div class="d-flex align-items-center">
+                          <img
+                            src="./assets/97baf907c0c14b0ffd910004086ee5821fbb6b33.jpg"
+                            alt=""
+                          />
+                          <div class="ms-3">
+                            <h3>Jacob Mohamed</h3>
+                            <h4>Jacob123mo@gmail.com</h4>
+                          </div>
+                        </div>
+                        <div class="d-flex justify-content-between mt-3 mb-2">
+                          <h6><i class="fa-solid fa-user me-2" style="color: #9E9E9E;"></i>My Profile</h6>
+                          <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                          <h6><i class="fa-solid fa-earth-americas me-2" style="color: #9E9E9E;"></i>English(U.S)</h6>
+                          <i class="fa-solid fa-chevron-right" id="toggleDropdown2"></i>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                          <h6><i class="fa-solid fa-circle-info me-2" style="color: #9E9E9E;"></i>Help</h6>
+                          <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                      </div>
+                      <div class="language p-4 d-none" id="dropdownMenu2">
+                        <h3 class="mb-3"><i class="fa-solid fa-angle-left me-2" id="closeLanguage" style="color: #9E9E9E;"></i>Change Language </h3>
+                        <div class="">
+                          <div class="d-flex justify-content-between mb-2">
+                              <h6><img src="./assets/Flags.svg" class="me-2" alt="">French</h6>
+                              <input type="checkbox" class="form-check-input ms-2" >
+                          </div>
+                          <div class="d-flex justify-content-between mb-2">
+                               <h6><img src="./assets/Flags (1).svg" class="me-2" alt="">English(U.S)</h6>
+                              <input type="checkbox" class="form-check-input ms-2" >
+                          </div>
+                          <div class="d-flex justify-content-between mb-2">
+                          <h6><img src="./assets/Flags (2).svg" class="me-2" alt="">Arabic </h6>
+                              <input type="checkbox" class="form-check-input ms-2" >
+                          </div>
+                        
+                         
+
+                        </div>
+
+                        
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </header>
+            <div class="activity-log px-4 px-md-0">
+              <div class="d-md-flex mt-5">
+                <h6 class="mb-4">File Audit</h6>
+                <div class="btn-group2 mb-2 mx-auto">
+                  <button class="me-4 "><a href="./activitylog.html" class="text-decoration-none ">Activity log</a></button>
+                  <button class="me-4 button-active2"><a href="./fileaudit.html" class="text-decoration-none ">File Audit</a></button>
+                <button class="me-4 "><a href="./useraudit.html"  class="text-decoration-none ">User Audit</a></button>
+                  <button>Ocr jobs</button>
+                </div>
+              </div>
+
+              <div class="d-md-flex justify-content-between my-3">
+               <h5><i class="fa-solid fa-briefcase me-2"></i>User Activity log</h5>
+                <div class="d-flex align-items-center gap-2">
+                  <!-- Date Picker -->
+                  <button
+                    class="btn border px-3 py-2 d-flex align-items-center gap-2 text-muted"
+                  >
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>25/5/2025 - Today</span>
+                    <i class="fas fa-chevron-down"></i>
+                  </button>
+
+                  <!-- Filter Icon Button -->
+                  <button class="btn border p-2 text-muted">
+                    <i class="fas fa-sliders-h"></i>
+                  </button>
+                </div>
+              </div>
+
+              <table class="files-table">
+                <thead>
+                  <tr>
+                    <th>
+                        <div class="img-history d-flex">
+                          <div class="me-2">
+                            <img
+                              src="./assets/1627f3a870e9b56d751d07f53392d7a84aa55817.jpg"
+                              alt="user"
+                            />
+                          </div>
+                          <div>Fouad Mohamed <br />General Manager</div>
+                        </div>
+                      </th>
+                    <th > <div >Employee <br /><span class="text-muted">Account Manager</span> </div></th>
+
+                    <th class="text-muted"><i class="fa-solid fa-circle-exclamation me-2 "></i>Profile</th>
+
+                  </tr>
+                </thead>
+              </table>
+
+              <!-- Approved -->
+              <div class="p-5">
+                <div class="activity-step">
+                  <div class="icon-box border rounded-5">
+                    <i class="fas fa-check fa-2xl"></i>
+                  </div>
+                  <div class="ms-4">
+                    <strong>Approve document </strong>
+                    <div class="activity-meta">
+                      <i class="fa-solid fa-clock fa-sm me-2"></i>10:00 AM 5 May
+                      2025
+                    </div>
+                    <div class="d-flex align-items-center mt-2">
+                       <img
+                            src="./assets/Group 8 (2).svg"
+                            
+                            alt=""
+                          />
+                      <div class="ms-2 " >
+                        <div >Marketing doc 2024-20</div>
+                       
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Seen -->
+                <div class="activity-step">
+                  <div class="icon-box">
+                    <i class="fa-solid fa-ban fa-2xl"></i>
+                  </div>
+                  <div class="ms-4">
+                    <strong>Reject document </strong>
+                    <div class="activity-meta">
+                      <i class="fa-solid fa-clock fa-sm me-2"></i>10:00 AM 5 May
+                      2025
+                    </div>
+                    <div class="d-flex align-items-center mt-2">
+                       <img
+                            src="./assets/Frame 2078547755.svg"
+                            
+                            alt=""
+                          />
+                      <div class="ms-2 " >
+                        <div >Marketing doc 2024-20</div>
+                       
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Locked -->
+                <div class="activity-step">
+                 <div class="icon-box border rounded-5">
+                    <i class="fas fa-check fa-2xl"></i>
+                  </div>
+                 <div class="ms-4">
+                    <strong>Approve document </strong>
+                    <div class="activity-meta">
+                      <i class="fa-solid fa-clock fa-sm me-2"></i>10:00 AM 5 May
+                      2025
+                    </div>
+                    <div class="d-flex align-items-center mt-2">
+                       <img
+                            src="./assets/Group 8 (2).svg"
+                            
+                            alt=""
+                          />
+                      <div class="ms-2 " >
+                        <div >Marketing doc 2024-20</div>
+                       
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Published -->
+                <div class="activity-step">
+                  <div class="icon-box">
+                   <i class="fa-solid fa-ban fa-2xl"></i>
+                  </div>
+                 <div class="ms-4">
+                    <strong>Reject document </strong>
+                    <div class="activity-meta">
+                      <i class="fa-solid fa-clock fa-sm me-2"></i>10:00 AM 5 May
+                      2025
+                    </div>
+                    <div class="d-flex align-items-center mt-2">
+                       <img
+                            src="./assets/Frame 2078547755.svg"
+                            
+                            alt=""
+                          />
+                      <div class="ms-2 " >
+                        <div >Marketing doc 2024-20</div>
+                       
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Created -->
+                <div class="activity-step">
+                  <div class="icon-box"><i class="fa-solid fa-ban fa-2xl"></i></div>
+                  <div class="ms-4">
+                    <strong>Reject document </strong>
+                    <div class="activity-meta">
+                      <i class="fa-solid fa-clock fa-sm me-2"></i>10:00 AM 5 May
+                      2025
+                    </div>
+                    <div class="d-flex align-items-center mt-2">
+                       <img
+                            src="./assets/Frame 2078547755.svg"
+                            
+                            alt=""
+                          />
+                      <div class="ms-2 " >
+                        <div >Marketing doc 2024-20</div>
+                       
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="table-footer">
+                <span>Showing Results 2 - 7 of 07</span>
+                <div class="table-pagination">
+                  <button class="btn-page">
+                    <i class="fa-solid fa-chevron-left"></i> Back
+                  </button>
+                  <span class="page-num active">1</span>
+                  <span class="page-num">2</span>
+                  <span class="page-num">3</span>
+                  <span class="page-num">4</span>
+                  <button class="btn-page">
+                    Next <i class="fa-solid fa-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/counter.js"></script>
+    <script src="./js/chart.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/pop.js"></script>
+  </body>
+</html>

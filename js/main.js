@@ -332,3 +332,4 @@ document.getElementById("nextBtn").addEventListener("click", function () {
   document.querySelector(".btn-ok").addEventListener("click", function () {
     document.getElementById("promptLayer").classList.add("d-none");
   });
+  

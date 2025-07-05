@@ -7,6 +7,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="./css/all.min.css" />
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
@@ -26,7 +27,7 @@
               <ul class="sidebar-menu">
                
                 <li class="mt-3">
-                  <a href="./index.html" 
+                  <a href="./index.html"
                     ><img src="./assets/dashboard-square-01.svg" alt="category"
                   /></a>
                 </li>
@@ -36,10 +37,12 @@
                   /></a>
                 </li>
                 <li>
-                  <a href="./dochistory.html" class="active"><img src="./assets/verify.svg" alt="verify" /></a>
+                  <a href="./dochistory.html" class="active"
+                    ><img src="./assets/verify.svg" alt="verify"
+                  /></a>
                 </li>
                 <li>
-                  <a href="./activitylog.html"
+                  <a href=""
                     ><img src="./assets/rotate-left.svg" alt="rotate-left"
                   /></a>
                 </li>
@@ -152,103 +155,51 @@
                   </div>
                 </div>
               </header>
-            <div class=" mt-3 ">
-                 <div class="d-flex justify-content-end mb-3">
-           <button class="close-btn"><i class="fa-solid fa-x me-2"></i>close</button>
-      </div>
-              <div class="files-table-container">
-                <div class="table-controls position-relative">
-                  <div class="search-box">
-                  <i class="fas fa-search"></i>
-                  <input type="text" placeholder="Search" />
+            <div class="activity-log px-4 px-md-0">
+              <div class="d-md-flex mt-5">
+                <h4 class="mb-4">User Audit</h4>
+                <div class="btn-group2 mb-2 mx-auto">
+                  <button class="me-4 "><a href="./activitylog.html" class="text-decoration-none ">Activity log</a></button>
+                  <button class="me-4 "><a href="./fileaudit.html" class="text-decoration-none ">File Audit</a></button>
+                  <button class="me-4 button-active2" ><a href="./useraudit.html" class="text-decoration-none ">User Audit</a></button>
+                  <button>Ocr jobs</button>
                 </div>
-                  <div class="table-filters">
-                       <select class="form-select">
-                      <option>Show favorites</option>
-                      <option>Approved</option>
-                      <option>Pending</option>
-                      <option>Rejected</option>
-                    </select>
-                    <select class="form-select">
-                      <option>Status</option>
-                      <option>Approved</option>
-                      <option>Pending</option>
-                      <option>Rejected</option>
-                    </select>
-                    <select class="form-select">
-                      <option>File Type</option>
-                      <option>PDF</option>
-                      <option>DOC</option>
-                      <option>XLS</option>
-                    </select>
-                    <select class="form-select">
-                      <option>Date</option>
-                    </select>
-                  </div>
+              </div>
+
+              <div class="d-md-flex justify-content-end my-3">
+                <div class="d-flex align-items-center gap-2">
+                  <!-- Date Picker -->
+                  <button
+                    class="btn border px-3 py-2 d-flex align-items-center gap-2 text-muted"
+                  >
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>25/5/2025 - Today</span>
+                    <i class="fas fa-chevron-down"></i>
+                  </button>
+
+                  <!-- Filter Icon Button -->
+                  <button class="btn border p-2 text-muted">
+                    <i class="fas fa-sliders-h"></i>
+                  </button>
                 </div>
+              </div>
 
-                <table class="files-table doc-table bg-white rounded-3">
-                  <thead>
-                    <tr class="bg-white">
-                      <th>File Name</th>
-                      <th>Submitted by</th>
-                      <th>Date</th>
-                      <th>Last Update</th>
-                      <th>Category</th>
-                      <th>Tages</th>
-                      <th>Status</th>
-                    </tr>
-                  </thead>
-                  <tbody id="filesTableBody">
-                    <tr>
-                      <td>
-                        <div>
-                          <div>Contract Agreement</div>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="img-history d-flex">
-                          <div class="me-2">
-                            <img
-                              src="./assets/1627f3a870e9b56d751d07f53392d7a84aa55817.jpg"
-                              alt="user"
-                            />
-                          </div>
-                          <div>Fouad Mohamed <br />General Manager</div>
-                        </div>
-                      </td>
-                      <td>
-                        <div>12/5/2024 <br />11:00pm</div>
-                      </td>
-                      <td>
-                        <div>12/5/2024 <br />11:00pm</div>
-                      </td>
-                      <td>
-                        <div>Finance</div>
-                      </td>
-                      <td>
-                        <div>Desgin, law , science</div>
-                      </td>
+              <table class="files-table">
+                <thead>
+                  <tr >
+                    <th><input type="checkbox" /></th>
+                    <th>File Name</th>
+                    <th>Joined </th>
 
-                      <td >
-                        <div class="d-flex justify-content-between align-items-center">
-                            <button class="status-badge approved border-0">
-                              Approved
-                            </button>
-                            <button class="btn-action">⋮</button>
+                    <th >Position</th>
 
-                        </div>
-
-                            
-                      </td>
-                    </tr>
+                    <th class="d-flex justify-content-center">Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="filesTableBody">
                   <tr>
-                      <td>
-                        <div>
-                          <div>Contract Agreement</div>
-                        </div>
-                      </td>
-                      <td>
+                    <td><input type="checkbox" /></td>
+                    <td>
                         <div class="img-history d-flex">
                           <div class="me-2">
                             <img
@@ -259,38 +210,29 @@
                           <div>Fouad Mohamed <br />General Manager</div>
                         </div>
                       </td>
-                      <td>
-                        <div>12/5/2024 <br />11:00pm</div>
-                      </td>
-                      <td>
-                        <div>12/5/2024 <br />11:00pm</div>
-                      </td>
-                      <td>
-                        <div>Finance</div>
-                      </td>
-                      <td>
-                        <div>Desgin, law , science</div>
-                      </td>
-
-                      <td >
-                        <div class="d-flex justify-content-between align-items-center">
-                            <button class="status-badge approved border-0">
-                              Approved
-                            </button>
-                            <button class="btn-action">⋮</button>
-
-                        </div>
-
-                            
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div>
-                          <div>Contract Agreement</div>
-                        </div>
-                      </td>
-                      <td>
+                    <td>
+                      <div class="file-date">12/5/2024<br />11:00pm</div>
+                    </td>
+                    <td>
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <button class="status-badge approved border-0">
+                          Approved
+                        </button>
+                      </div>
+                    </td>
+                    <td>
+        <div class="file-actions d-flex justify-content-center">
+          <button class="btn-action">Profile</button>
+          <button class="btn-action">Activity</button>
+          <button class="btn-action">⋮</button>
+        </div>
+      </td>
+                  </tr>
+                   <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>
                         <div class="img-history d-flex">
                           <div class="me-2">
                             <img
@@ -301,38 +243,29 @@
                           <div>Fouad Mohamed <br />General Manager</div>
                         </div>
                       </td>
-                      <td>
-                        <div>12/5/2024 <br />11:00pm</div>
-                      </td>
-                      <td>
-                        <div>12/5/2024 <br />11:00pm</div>
-                      </td>
-                      <td>
-                        <div>Finance</div>
-                      </td>
-                      <td>
-                        <div>Desgin, law , science</div>
-                      </td>
-
-                      <td >
-                        <div class="d-flex justify-content-between align-items-center">
-                            <button class="status-badge approved border-0">
-                              Approved
-                            </button>
-                            <button class="btn-action">⋮</button>
-
-                        </div>
-
-                            
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div>
-                          <div>Contract Agreement</div>
-                        </div>
-                      </td>
-                      <td>
+                    <td>
+                      <div class="file-date">12/5/2024<br />11:00pm</div>
+                    </td>
+                    <td>
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <button class="status-badge Employee border-0">
+                          Employee
+                        </button>
+                      </div>
+                    </td>
+                    <td>
+        <div class="file-actions d-flex justify-content-center">
+          <button class="btn-action">Profile</button>
+          <button class="btn-action">Activity</button>
+          <button class="btn-action">⋮</button>
+        </div>
+      </td>
+                  </tr>
+                   <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>
                         <div class="img-history d-flex">
                           <div class="me-2">
                             <img
@@ -343,38 +276,29 @@
                           <div>Fouad Mohamed <br />General Manager</div>
                         </div>
                       </td>
-                      <td>
-                        <div>12/5/2024 <br />11:00pm</div>
-                      </td>
-                      <td>
-                        <div>12/5/2024 <br />11:00pm</div>
-                      </td>
-                      <td>
-                        <div>Finance</div>
-                      </td>
-                      <td>
-                        <div>Desgin, law , science</div>
-                      </td>
-
-                      <td >
-                        <div class="d-flex justify-content-between align-items-center">
-                            <button class="status-badge approved border-0">
-                              Approved
-                            </button>
-                            <button class="btn-action">⋮</button>
-
-                        </div>
-
-                            
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div>
-                          <div>Contract Agreement</div>
-                        </div>
-                      </td>
-                      <td>
+                    <td>
+                      <div class="file-date">12/5/2024<br />11:00pm</div>
+                    </td>
+                    <td>
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <button class="status-badge Admin border-0">
+                          Admin 
+                        </button>
+                      </div>
+                    </td>
+                    <td>
+        <div class="file-actions d-flex justify-content-center">
+          <button class="btn-action">Profile</button>
+          <button class="btn-action">Activity</button>
+          <button class="btn-action">⋮</button>
+        </div>
+      </td>
+                  </tr>
+                   <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>
                         <div class="img-history d-flex">
                           <div class="me-2">
                             <img
@@ -385,38 +309,29 @@
                           <div>Fouad Mohamed <br />General Manager</div>
                         </div>
                       </td>
-                      <td>
-                        <div>12/5/2024 <br />11:00pm</div>
-                      </td>
-                      <td>
-                        <div>12/5/2024 <br />11:00pm</div>
-                      </td>
-                      <td>
-                        <div>Finance</div>
-                      </td>
-                      <td>
-                        <div>Desgin, law , science</div>
-                      </td>
-
-                      <td >
-                        <div class="d-flex justify-content-between align-items-center">
-                            <button class="status-badge approved border-0">
-                              Approved
-                            </button>
-                            <button class="btn-action">⋮</button>
-
-                        </div>
-
-                            
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div>
-                          <div>Contract Agreement</div>
-                        </div>
-                      </td>
-                      <td>
+                    <td>
+                      <div class="file-date">12/5/2024<br />11:00pm</div>
+                    </td>
+                    <td>
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <button class="status-badge approved border-0">
+                          Approved
+                        </button>
+                      </div>
+                    </td>
+                    <td>
+        <div class="file-actions d-flex justify-content-center">
+          <button class="btn-action">Profile</button>
+          <button class="btn-action">Activity</button>
+          <button class="btn-action">⋮</button>
+        </div>
+      </td>
+                  </tr>
+                   <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>
                         <div class="img-history d-flex">
                           <div class="me-2">
                             <img
@@ -427,48 +342,76 @@
                           <div>Fouad Mohamed <br />General Manager</div>
                         </div>
                       </td>
-                      <td>
-                        <div>12/5/2024 <br />11:00pm</div>
-                      </td>
-                      <td>
-                        <div>12/5/2024 <br />11:00pm</div>
-                      </td>
-                      <td>
-                        <div>Finance</div>
-                      </td>
-                      <td>
-                        <div>Desgin, law , science</div>
-                      </td>
-
-                      <td >
-                        <div class="d-flex justify-content-between align-items-center">
-                            <button class="status-badge approved border-0">
-                              Approved
-                            </button>
-                            <button class="btn-action">⋮</button>
-
+                    <td>
+                      <div class="file-date">12/5/2024<br />11:00pm</div>
+                    </td>
+                    <td>
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                       <button class="status-badge Employee border-0">
+                          Employee
+                        </button>
+                      </div>
+                    </td>
+                    <td>
+        <div class="file-actions d-flex justify-content-center">
+          <button class="btn-action">Profile</button>
+          <button class="btn-action">Activity</button>
+          <button class="btn-action">⋮</button>
+        </div>
+      </td>
+                  </tr>
+                   <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>
+                        <div class="img-history d-flex">
+                          <div class="me-2">
+                            <img
+                              src="./assets/1627f3a870e9b56d751d07f53392d7a84aa55817.jpg"
+                              alt="user"
+                            />
+                          </div>
+                          <div>Fouad Mohamed <br />General Manager</div>
                         </div>
-
-                            
                       </td>
-                    </tr>
-                  </tbody>
-                </table>
+                    <td>
+                      <div class="file-date">12/5/2024<br />11:00pm</div>
+                    </td>
+                    <td>
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                       <button class="status-badge Employee border-0">
+                          Employee
+                        </button>
+                      </div>
+                    </td>
+                    <td>
+        <div class="file-actions d-flex justify-content-center">
+          <button class="btn-action">Profile</button>
+          <button class="btn-action">Activity</button>
+          <button class="btn-action">⋮</button>
+        </div>
+      </td>
+                  </tr>
 
-                <div class="table-footer">
-                  <span>Showing Results 2 - 7 of 07</span>
-                  <div class="table-pagination">
-                    <button class="btn-page">
-                      <i class="fa-solid fa-chevron-left"></i> Back
-                    </button>
-                    <span class="page-num active">1</span>
-                    <span class="page-num">2</span>
-                    <span class="page-num">3</span>
-                    <span class="page-num">4</span>
-                    <button class="btn-page">
-                      Next <i class="fa-solid fa-chevron-right"></i>
-                    </button>
-                  </div>
+                </tbody>
+              </table>
+
+              <div class="table-footer">
+                <span>Showing Results 2 - 7 of 07</span>
+                <div class="table-pagination">
+                  <button class="btn-page">
+                    <i class="fa-solid fa-chevron-left"></i> Back
+                  </button>
+                  <span class="page-num active">1</span>
+                  <span class="page-num">2</span>
+                  <span class="page-num">3</span>
+                  <span class="page-num">4</span>
+                  <button class="btn-page">
+                    Next <i class="fa-solid fa-chevron-right"></i>
+                  </button>
                 </div>
               </div>
             </div>
@@ -476,6 +419,10 @@
         </div>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/counter.js"></script>
+    <script src="./js/chart.js"></script>
+    <script src="./js/main.js"></script>
     <script src="./js/pop.js"></script>
   </body>
 </html>
