@@ -103,7 +103,7 @@
                         <span class="name">Jacob Mohamed</span>
                         <span class="role">CEO</span>
                       </div>
-                      <i class="fa-solid fa-caret-down"  id="toggleDropdown"></i>
+                      <i class="fa-solid fa-caret-down pointer"  id="toggleDropdown"></i>
                       <div class="postion-relative">
                       <div class="pop p-4 d-none"  id="dropdownMenu">
                         <div class="d-flex align-items-center">
@@ -118,19 +118,19 @@
                         </div>
                         <div class="d-flex justify-content-between mt-3 mb-2">
                           <h6><i class="fa-solid fa-user me-2" style="color: #9E9E9E;"></i>My Profile</h6>
-                          <i class="fa-solid fa-chevron-right"></i>
+                          <i class="fa-solid fa-chevron-right pointer"></i>
                         </div>
                         <div class="d-flex justify-content-between mb-2">
                           <h6><i class="fa-solid fa-earth-americas me-2" style="color: #9E9E9E;"></i>English(U.S)</h6>
-                          <i class="fa-solid fa-chevron-right" id="toggleDropdown2"></i>
+                          <i class="fa-solid fa-chevron-right pointer" id="toggleDropdown2"></i>
                         </div>
                         <div class="d-flex justify-content-between mb-2">
                           <h6><i class="fa-solid fa-circle-info me-2" style="color: #9E9E9E;"></i>Help</h6>
-                          <i class="fa-solid fa-chevron-right"></i>
+                          <i class="fa-solid fa-chevron-right pointer"></i>
                         </div>
                       </div>
                       <div class="language p-4 d-none" id="dropdownMenu2">
-                        <h3 class="mb-3"><i class="fa-solid fa-angle-left me-2" id="closeLanguage" style="color: #9E9E9E;"></i>Change Language </h3>
+                        <h3 class="mb-3"><i class="fa-solid fa-angle-left me-2 pointer" id="closeLanguage" style="color: #9E9E9E;"></i>Change Language </h3>
                         <div class="">
                           <div class="d-flex justify-content-between mb-2">
                               <h6><img src="./assets/Flags.svg" class="me-2" alt="">French</h6>
@@ -518,6 +518,7 @@
                       <img
                         src="./assets/rotate-left.svg"
                         alt="rotate-left"
+                        class="me-2"
                       />Recent Files
                     </h3>
                     <div class="section-actions">
@@ -563,14 +564,14 @@
                     <table class="files-table">
                       <thead>
                         <tr>
-                          <th><input type="checkbox" /></th>
+                          <th><input type="checkbox" class="w-25 form-check-input p-2" /></th>
                           <th>File Name</th>
                           <th>Publish</th>
                           <th>Status</th>
                           <th class="d-flex justify-content-center">Actions</th>
                         </tr>
                       </thead>
-                      <tbody id="filesTableBody">
+                      <tbody id="filesTableBody" >
                         <!-- Files will be populated by JavaScript -->
                       </tbody>
                     </table>

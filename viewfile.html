@@ -73,7 +73,7 @@
               alt="LocGet"
             />
             <!-- Header -->
-             <header
+           <header
                 class="header d-md-flex justify-content-between align-items-center"
               >
                 <div class="header-left">
@@ -99,7 +99,7 @@
                         <span class="name">Jacob Mohamed</span>
                         <span class="role">CEO</span>
                       </div>
-                      <i class="fa-solid fa-caret-down"  id="toggleDropdown"></i>
+                      <i class="fa-solid fa-caret-down pointer"  id="toggleDropdown"></i>
                       <div class="postion-relative">
                       <div class="pop p-4 d-none"  id="dropdownMenu">
                         <div class="d-flex align-items-center">
@@ -114,19 +114,19 @@
                         </div>
                         <div class="d-flex justify-content-between mt-3 mb-2">
                           <h6><i class="fa-solid fa-user me-2" style="color: #9E9E9E;"></i>My Profile</h6>
-                          <i class="fa-solid fa-chevron-right"></i>
+                          <i class="fa-solid fa-chevron-right pointer"></i>
                         </div>
                         <div class="d-flex justify-content-between mb-2">
                           <h6><i class="fa-solid fa-earth-americas me-2" style="color: #9E9E9E;"></i>English(U.S)</h6>
-                          <i class="fa-solid fa-chevron-right" id="toggleDropdown2"></i>
+                          <i class="fa-solid fa-chevron-right pointer" id="toggleDropdown2"></i>
                         </div>
                         <div class="d-flex justify-content-between mb-2">
                           <h6><i class="fa-solid fa-circle-info me-2" style="color: #9E9E9E;"></i>Help</h6>
-                          <i class="fa-solid fa-chevron-right"></i>
+                          <i class="fa-solid fa-chevron-right pointer"></i>
                         </div>
                       </div>
                       <div class="language p-4 d-none" id="dropdownMenu2">
-                        <h3 class="mb-3"><i class="fa-solid fa-angle-left me-2" id="closeLanguage" style="color: #9E9E9E;"></i>Change Language </h3>
+                        <h3 class="mb-3"><i class="fa-solid fa-angle-left me-2 pointer" id="closeLanguage" style="color: #9E9E9E;"></i>Change Language </h3>
                         <div class="">
                           <div class="d-flex justify-content-between mb-2">
                               <h6><img src="./assets/Flags.svg" class="me-2" alt="">French</h6>
@@ -160,7 +160,7 @@
                     <h5 class="me-3">sales  </h5>
                      </div>
                     <button class="btn-upload">
-                       + Add Category 
+                       + Add Folder 
                       </button>
                   
 
@@ -169,7 +169,25 @@
 <div class="table-controls d-flex justify-content-end position-relative mt-5 mb-4">
                  
                   <div class="table-filters">
-                      
+                    <div class="d-flex justify-content-end">
+  <div class="active-font gap-2">
+    <div class="switch-container position-relative">
+      <input type="checkbox" id="ocr-toggle" checked hidden>
+      <label class="switch-label" for="ocr-toggle">
+        <h3 class="mt-2 me-5">
+          <span id="switch-text">Icon</span>
+        </h3>
+      </label>
+      
+    </div>
+  </div>
+</div>
+                      <select class="form-select w-100">
+                      <option>Show favorites only </option>
+                      <option>Approved</option>
+                      <option>Pending</option>
+                      <option>Rejected</option>
+                    </select>
                     <select class="form-select">
                       <option>Status</option>
                       <option>Approved</option>
@@ -243,6 +261,114 @@
                         </div>
                     </div>
                      <div class="col-md-2 info-cat ">
+                        <div class="bg-white p-3 text-center">
+                        <div class="d-flex justify-content-between">
+                             <input type="checkbox" class="rounded-checkbox">
+
+                              <img src="./assets/Frame 2078547756.svg" class="mt-3" alt="">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                       
+
+                        </div>
+                        <h3 class="mt-3">Marketing doc </h3>
+                        <p>Approved</p>
+                        <div class="d-flex justify-content-between">
+                            <p>1MB</p>
+                            <p>22.2.2025</p>
+                        </div>
+                        </div>
+                    </div>
+                      <div class="col-md-2 info-cat ">
+                        <div class="bg-white p-3 text-center">
+                        <div class="d-flex justify-content-between">
+                             <input type="checkbox" class="rounded-checkbox">
+
+                              <img src="./assets/Group 8 (1).svg" class="mt-3" alt="">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                       
+
+                        </div>
+                        <h3 class="mt-3">Marketing doc </h3>
+                        <p>Approved</p>
+                        <div class="d-flex justify-content-between">
+                            <p>1MB</p>
+                            <p>22.2.2025</p>
+                        </div>
+                        </div>
+                    </div>
+                     <div class="col-md-2 info-cat ">
+                        <div class="bg-white p-3 text-center">
+                        <div class="d-flex justify-content-between">
+                             <input type="checkbox" class="rounded-checkbox">
+
+                              <img src="./assets/Frame 2078547923.svg" class="mt-3" alt="">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                       
+
+                        </div>
+                        <h3 class="mt-3">Marketing doc </h3>
+                        <p>Approved</p>
+                        <div class="d-flex justify-content-between">
+                            <p>1MB</p>
+                            <p>22.2.2025</p>
+                        </div>
+                        </div>
+                    </div>
+                     <div class="col-md-2 info-cat ">
+                        <div class="bg-white p-3 text-center">
+                        <div class="d-flex justify-content-between">
+                             <input type="checkbox" class="rounded-checkbox">
+
+                              <img src="./assets/Frame 2078547756.svg" class="mt-3" alt="">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                       
+
+                        </div>
+                        <h3 class="mt-3">Marketing doc </h3>
+                        <p>Approved</p>
+                        <div class="d-flex justify-content-between">
+                            <p>1MB</p>
+                            <p>22.2.2025</p>
+                        </div>
+                        </div>
+                    </div>
+                      <div class="col-md-2 info-cat ">
+                        <div class="bg-white p-3 text-center">
+                        <div class="d-flex justify-content-between">
+                             <input type="checkbox" class="rounded-checkbox">
+
+                              <img src="./assets/Group 8 (1).svg" class="mt-3" alt="">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                       
+
+                        </div>
+                        <h3 class="mt-3">Marketing doc </h3>
+                        <p>Approved</p>
+                        <div class="d-flex justify-content-between">
+                            <p>1MB</p>
+                            <p>22.2.2025</p>
+                        </div>
+                        </div>
+                    </div>
+                     <div class="col-md-2 info-cat ">
+                        <div class="bg-white p-3 text-center">
+                        <div class="d-flex justify-content-between">
+                             <input type="checkbox" class="rounded-checkbox">
+
+                              <img src="./assets/Frame 2078547923.svg" class="mt-3" alt="">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                       
+
+                        </div>
+                        <h3 class="mt-3">Marketing doc </h3>
+                        <p>Approved</p>
+                        <div class="d-flex justify-content-between">
+                            <p>1MB</p>
+                            <p>22.2.2025</p>
+                        </div>
+                        </div>
+                    </div>
+                         <div class="col-md-2 info-cat ">
                         <div class="bg-white p-3 text-center">
                         <div class="d-flex justify-content-between">
                              <input type="checkbox" class="rounded-checkbox">

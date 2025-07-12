@@ -74,7 +74,7 @@ function renderFilesTable() {
   
   tbody.innerHTML = filesData.map(file => `
     <tr>
-      <td><input type="checkbox"></td>
+      <td><input type="checkbox" class="w-25 form-check-input p-2"></td>
       <td>
         <div class="file-item">
           <div class="file-icon ${file.type}">

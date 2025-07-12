@@ -19,27 +19,27 @@
         <div class="row">
           <div class="col-md-1">
             <!-- Sidebar -->
-            <nav class="sidebar position-relative">
+                 <nav class="sidebar position-relative">
                <a href="./index.html" class="text-decoration-none text-center mb-3"
                   ><li class="text-decoration-none list-unstyled "><img src="./assets/L LOGO.svg" alt="logo" /></li
                 ></a>
               <ul class="sidebar-menu">
-              
+                 
                 <li class="mt-3">
-                  <a href="" class="active"
-                    ><img src="./assets/category.svg" alt="category"
+                  <a href="./index.html" 
+                    ><img src="./assets/dashboard-square-01.svg" alt="category"
                   /></a>
                 </li>
                 <li>
-                  <a href=""
+                  <a href="./upload.html" 
                     ><img src="./assets/document-text.svg" alt="text"
                   /></a>
                 </li>
                 <li>
-                  <a href="./activitylog.html"><img src="./assets/verify.svg" alt="verify" /></a>
+                  <a href="./dochistory.html" class="active"><img src="./assets/verify.svg" alt="verify" /></a>
                 </li>
                 <li>
-                  <a href=""
+                  <a href="./activitylog.html"
                     ><img src="./assets/rotate-left.svg" alt="rotate-left"
                   /></a>
                 </li>
@@ -73,7 +73,7 @@
               alt="LocGet"
             />
             <!-- Header -->
-             <header
+           <header
                 class="header d-md-flex justify-content-between align-items-center"
               >
                 <div class="header-left">
@@ -99,7 +99,7 @@
                         <span class="name">Jacob Mohamed</span>
                         <span class="role">CEO</span>
                       </div>
-                      <i class="fa-solid fa-caret-down"  id="toggleDropdown"></i>
+                      <i class="fa-solid fa-caret-down pointer"  id="toggleDropdown"></i>
                       <div class="postion-relative">
                       <div class="pop p-4 d-none"  id="dropdownMenu">
                         <div class="d-flex align-items-center">
@@ -114,19 +114,19 @@
                         </div>
                         <div class="d-flex justify-content-between mt-3 mb-2">
                           <h6><i class="fa-solid fa-user me-2" style="color: #9E9E9E;"></i>My Profile</h6>
-                          <i class="fa-solid fa-chevron-right"></i>
+                          <i class="fa-solid fa-chevron-right pointer"></i>
                         </div>
                         <div class="d-flex justify-content-between mb-2">
                           <h6><i class="fa-solid fa-earth-americas me-2" style="color: #9E9E9E;"></i>English(U.S)</h6>
-                          <i class="fa-solid fa-chevron-right" id="toggleDropdown2"></i>
+                          <i class="fa-solid fa-chevron-right pointer" id="toggleDropdown2"></i>
                         </div>
                         <div class="d-flex justify-content-between mb-2">
                           <h6><i class="fa-solid fa-circle-info me-2" style="color: #9E9E9E;"></i>Help</h6>
-                          <i class="fa-solid fa-chevron-right"></i>
+                          <i class="fa-solid fa-chevron-right pointer"></i>
                         </div>
                       </div>
                       <div class="language p-4 d-none" id="dropdownMenu2">
-                        <h3 class="mb-3"><i class="fa-solid fa-angle-left me-2" id="closeLanguage" style="color: #9E9E9E;"></i>Change Language </h3>
+                        <h3 class="mb-3"><i class="fa-solid fa-angle-left me-2 pointer" id="closeLanguage" style="color: #9E9E9E;"></i>Change Language </h3>
                         <div class="">
                           <div class="d-flex justify-content-between mb-2">
                               <h6><img src="./assets/Flags.svg" class="me-2" alt="">French</h6>
@@ -159,13 +159,13 @@
            <button class="close-btn"><i class="fa-solid fa-x me-2"></i>close</button>
       </div>
       </div>
-              <div class="files-table-container ">
-                <div class="table-controls position-relative px-5 px-md-0">
+              <div class="files-table-container  ">
+                <div class="table-controls position-relative px-5 px-md-0 ">
                   <div class="search-box">
                   <i class="fas fa-search d-none d-md-flex"></i>
                   <input type="text" placeholder="Search" />
                 </div>
-                  <div class="table-filters">
+                  <table class="table-filters  ">
                        <select class="form-select">
                       <option>Show favorites</option>
                       <option>Approved</option>
@@ -187,10 +187,10 @@
                     <select class="form-select">
                       <option>Date</option>
                     </select>
-                  </div>
+                  </table>
                 </div>
 
-                <table class="files-table doc-table bg-white rounded-3">
+                <table class="files-table doc-table bg-white ">
                   <thead>
                     <tr class="bg-white">
                       <th>File Name</th>
@@ -198,9 +198,9 @@
                       <th>Date</th>
                       <th>Last Update</th>
                       <th>Category</th>
-                      <th>Version</th>
-                      <th>Tages</th>
-                      <th>Status</th>
+                      <th class="text-center">Version</th>
+                      <th class="text-center">Tages</th>
+                      <th class="text-center">Status</th>
                     </tr>
                   </thead>
                   <tbody id="filesTableBody">
