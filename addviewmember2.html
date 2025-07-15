@@ -218,10 +218,26 @@
     </div>
 
     <p class="text-muted">Manage members and their roles</p>
-
-    <div class="audience-search-box mb-4 w-75">
+<div class="d-flex ">
+    <div class="audience-search-box mb-4 w-50">
       <input type="text" class="form-control border-0 bg-transparent" placeholder="Search members">
+      
     </div>
+    <div class="w-25 d-flex ms-2 audience-search-box bg-transparent">
+     <select class="form-select me-2">
+                          <option>Roles</option>
+                          <option>Approved</option>
+                          <option>Pending</option>
+                          <option>Rejected</option>
+                        </select>
+                         <select class="form-select">
+                          <option>Departments</option>
+                          <option>Approved</option>
+                          <option>Pending</option>
+                          <option>Rejected</option>
+                        </select>
+                        </div>
+                        </div>
 
     <div class="audience-table-container w-75">
       <table class="table table-hover align-middle audience-table">
@@ -229,6 +245,7 @@
           <tr>
             <th>Name</th>
             <th>Email</th>
+              <th>Departments</th>
             <th>Role</th>
             <th>Permissions</th>
           </tr>
@@ -237,32 +254,42 @@
           <tr>
             <td class="name py-4" >Ethan Harper</td>
             <td class="email">ethan.harper@example.com</td>
+                   <td class="audience-permissions-text">Finance </td>
+                     <td class="audience-permissions-text">Full Access</td>
             <td><button class="audience-role-badge">Admin</button></td>
-            <td class="audience-permissions-text">Full Access</td>
+          
           </tr>
-          <tr>
-            <td class="name py-4">Olivia Bennett</td>
-            <td class="email">olivia.bennett@example.com</td>
-            <td><span class="audience-role-badge">Editor</span></td>
-            <td class="audience-permissions-text">Edit, View</td>
+        <tr>
+            <td class="name py-4" >Ethan Harper</td>
+            <td class="email">ethan.harper@example.com</td>
+                   <td class="audience-permissions-text">Finance </td>
+                     <td class="audience-permissions-text">Full Access</td>
+            <td><button class="audience-role-badge">Admin</button></td>
+          
           </tr>
-          <tr>
-            <td class="name py-4">Noah Carter</td>
-            <td class="email">noah.carter@example.com</td>
-            <td><span class="audience-role-badge">Viewer</span></td>
-            <td class="audience-permissions-text">View Only</td>
+           <tr>
+            <td class="name py-4" >Ethan Harper</td>
+            <td class="email">ethan.harper@example.com</td>
+                   <td class="audience-permissions-text">Finance </td>
+                     <td class="audience-permissions-text">Full Access</td>
+            <td><button class="audience-role-badge">Admin</button></td>
+          
           </tr>
-          <tr>
-            <td class="name py-4">Ava Mitchell</td>
-            <td class="email">ava.mitchell@example.com</td>
-            <td><span class="audience-role-badge">Contributor</span></td>
-            <td class="audience-permissions-text">Create, Edit</td>
+           <tr>
+            <td class="name py-4" >Ethan Harper</td>
+            <td class="email">ethan.harper@example.com</td>
+                   <td class="audience-permissions-text">Finance </td>
+                     <td class="audience-permissions-text">Full Access</td>
+            <td><button class="audience-role-badge">Admin</button></td>
+          
           </tr>
-          <tr>
-            <td class="name py-4">Liam Foster</td>
-            <td class="email">liam.foster@example.com</td>
-            <td><span class="audience-role-badge">Admin</span></td>
-            <td class="audience-permissions-text">Full Access</td>
+           <tr>
+            <td class="name py-4" >Ethan Harper</td>
+            <td class="email">ethan.harper@example.com</td>
+                   <td class="audience-permissions-text">Finance </td>
+                     <td class="audience-permissions-text">Full Access</td>
+            <td><button class="audience-role-badge">Admin</button></td>
+          
           </tr>
         </tbody>
       </table>

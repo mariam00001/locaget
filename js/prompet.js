@@ -39,4 +39,5 @@ document.getElementById("exitBtn4").addEventListener("click", closePrompt);
 
 
 document.getElementById("exitBtn2")?.addEventListener("click", closePrompt2);
+document.getElementById("exitBtn3")?.addEventListener("click", closePrompt2);
 document.getElementById("cancelBtn")?.addEventListener("click", closePrompt2);
