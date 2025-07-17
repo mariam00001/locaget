@@ -20,3 +20,4 @@ document.querySelector(".btn-cancel2").addEventListener("click", closePrompt);
       switchText.textContent = "";
     }
   });
+  

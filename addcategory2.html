@@ -38,7 +38,7 @@
                   /></a>
                 </li>
                 <li>
-                  <a href="./dochistory.html" 
+                  <a href="./dochistory.html" class="active"
                     ><img src="./assets/verify.svg" alt="verify"
                   /></a>
                 </li>
@@ -48,7 +48,7 @@
                   /></a>
                 </li>
                 <li>
-                  <a href="./notification.html" class="active"
+                  <a href=""
                     ><img src="./assets/setting-2.svg" alt="setting-2"
                   /></a>
                 </li>
@@ -60,7 +60,7 @@
                       /></a>
                     </li>
                     <li>
-                      <a href="" 
+                      <a href=""
                         ><img src="./assets/elements.svg" alt="elements"
                       /></a>
                     </li>
@@ -206,190 +206,120 @@
                 </div>
               </div>
             </header>
-            <div class="w-75 position-relative ">
-<div class="mt-4">
-    <h4 class="fw-bold">Notifications</h4>
-    <div class="d-flex justify-content-between mt-4 border-bottom mb-4 notification-info">
-      <div class=" d-flex  ">
-      <p>All</p>
-      <p>Important</p>
-      <p>Action Required</p>
-      </div>
-       <a href="#" class="text-primary small text-decoration-none">Mark all as read </a>
-    </div>
+<div class="w-50 py-4 ">
+  <h3>Categories</h3>
+  <p>Manage categories and subcategories</p>
 
-   
+  <!-- Add Category -->
+  <div class="section-title">Add New Category</div>
+  <div class="mb-3">
+    <label for="categoryName" class="form-label">Category Name</label>
+    <input type="text" class="form-control bg-transparent" id="categoryName" placeholder="Enter category name">
+    <button class="btn-delete mt-2">Add Category</button>
   </div>
 
-  <!-- Notification - Upload Successful -->
-   <div class="bg-notification pe-3">
-      <div class="notification">
-    <div class="d-flex">
-      <img src="./assets/Frame 20.png" alt="">
-      <div class="content">
-        <div class="title">Upload Successful</div>
-        <div class="time">5 minutes ago</div>
-        <div class="message">Upload complete! Your document has been safely added to the system.</div>
-        
-      </div>
-    </div>
-    <div class="actions">
-      <button class="btn-upload">View Document</button>
-    </div>
+   <div class="container">
+    <h5 class="fw-bold mb-3">Existing Categories</h5>
+    <table class="table border">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Subcategories</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Category A</td>
+          <td>
+            <select class="form-control" multiple>
+              <option selected>Salary</option>
+              <option selected>Finance</option>
+              <option selected>Sales</option>
+              <option>Hardware</option>
+            </select>
+          </td>
+          <td class="text-end">
+            <i class="fa-solid fa-trash-can delete-icon"></i>
+          </td>
+        </tr>
+        <tr>
+          <td>Category B</td>
+          <td>
+            <select class="subcategory-select form-control" multiple>
+              <option selected>Salary</option>
+              <option selected>Finance</option>
+              <option>Sales</option>
+              <option>Hardware</option>
+            </select>
+          </td>
+          <td class="text-end">
+            <i class="fa-solid fa-trash-can delete-icon"></i>
+          </td>
+        </tr>
+        <tr>
+          <td>Category C</td>
+          <td>
+            <select class="subcategory-select form-control" multiple>
+              <option>Salary</option>
+              <option>Finance</option>
+              <option>Sales</option>
+              <option selected>Hardware</option>
+            </select>
+          </td>
+          <td class="text-end">
+            <i class="fa-solid fa-trash-can delete-icon"></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
-  <!-- Document Declined -->
-  <div class="my-4">
-    <div class="d-flex">
-      <img src="./assets/Depth 6, Frame 0.png" class="p-3" alt="">
-      <div class="content">
-        <div class="title ">Document Declined</div>
-        <div class="time">10 minutes ago</div>
-        <div class="message">Your document was declined. You can review the feedback and re-upload it when you're ready.</div>
-        
-      </div>
-      <div class="actions">
-      <button class="btn-try mb-2">View Document</button>
-      <a href="#" ><span class="me-2 mark-p" >Marked as read </span>
-<span class="position-relative ">
-  <i class="fa-solid fa-check "></i>
-  <i class="fa-solid fa-check position-absolute icon-check"></i> 
-</span>
-
- </a>
-    </div>
-    </div>
-    
+  <!-- Add Subcategory -->
+  <div class="section-title">Subcategories Configuration</div>
+  <div class="mb-3">
+    <label for="subcategoryName" class="form-label">Subcategory Name</label>
+    <input type="text" class="form-control bg-transparent" id="subcategoryName" placeholder="Enter subcategory name">
+    <button class="btn-delete mt-2">Add Subcategory</button>
   </div>
 
-  <!-- Document Approved -->
-     <div class="my-4">
-    <div class="d-flex">
-             <img src="./assets/Depth 6, Frame 0 (1).png" class="p-3" alt="">
-      <div class="content">
-        <div class="title ">Document Declined</div>
-        <div class="time">10 minutes ago</div>
-        <div class="message">Your document was declined. You can review the feedback and re-upload it when you're ready.</div>
-        
-      </div>
-      <div class="actions">
-      <button class="btn-try mb-2">View Document</button>
-      <a href="#" ><span class="me-2 mark-p" >Marked as read </span>
-<span class="position-relative ">
-  <i class="fa-solid fa-check "></i>
-  <i class="fa-solid fa-check position-absolute icon-check"></i> 
-</span>
-
- </a>
-    </div>
-    </div>
-    
-  </div>
-     <div class="my-4">
-    <div class="d-flex">
-      <img src="./assets/Frame 2078547992.png" alt="">
-
-      <div class="content">
-        <div class="title ">Document Expired</div>
-        <div class="time">15 minutes ago</div>
-        <div class="message">Heads up! One of your documents has expired. You can delete it or upload a new version.</div>
-        
-      </div>
-      <div class="actions">
-      <button class="btn-try mb-2">Delete</button>
-       <a href="#">Mark as read</a>
-    </div>
-    </div>
-    
-  </div>
-  <!-- Document Declined -->
-  <div class="my-4">
-    <div class="d-flex">
-      <img src="./assets/Depth 6, Frame 0.png" class="p-3" alt="">
-      <div class="content">
-        <div class="title ">Document Declined</div>
-        <div class="time">10 minutes ago</div>
-        <div class="message">Your document was declined. You can review the feedback and re-upload it when you're ready.</div>
-        
-      </div>
-      <div class="actions">
-      <button class="btn-try mb-2">View Document</button>
-      <a href="#" ><span class="me-2 mark-p" >Marked as read </span>
-<span class="position-relative ">
-  <i class="fa-solid fa-check "></i>
-  <i class="fa-solid fa-check position-absolute icon-check"></i> 
-</span>
-
- </a>
-    </div>
-    </div>
-    
-  </div>
-
-  <!-- Document Approved -->
-     <div class="my-4">
-    <div class="d-flex">
-             <img src="./assets/Depth 6, Frame 0 (1).png" class="p-3" alt="">
-      <div class="content">
-        <div class="title ">Document Declined</div>
-        <div class="time">10 minutes ago</div>
-        <div class="message">Your document was declined. You can review the feedback and re-upload it when you're ready.</div>
-        
-      </div>
-      <div class="actions">
-      <button class="btn-try mb-2">View Document</button>
-      <a href="#" ><span class="me-2 mark-p" >Marked as read </span>
-<span class="position-relative ">
-  <i class="fa-solid fa-check "></i>
-  <i class="fa-solid fa-check position-absolute icon-check"></i> 
-</span>
-
- </a>
-    </div>
-    </div>
-    
-  </div>
-     <div class="my-4">
-    <div class="d-flex">
-      <img src="./assets/Frame 2078547992.png" alt="">
-
-      <div class="content">
-        <div class="title ">Document Expired</div>
-        <div class="time">15 minutes ago</div>
-        <div class="message">Heads up! One of your documents has expired. You can delete it or upload a new version.</div>
-        
-      </div>
-      <div class="actions">
-      <button class="btn-try mb-2">Delete</button>
-       <a href="#">Mark as read</a>
-    </div>
-    </div>
-    
-  </div>
-   </div>
-   
+  <!-- Added Subcategories -->
+  <ul class="">
+    <li class="list-group-item d-flex justify-content-between align-items-center mb-3">
+      Salary
+      <span class="delete-icon">&#128465;</span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center mb-3">
+      Hardware
+      <span class="delete-icon">&#128465;</span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center mb-3">
+      Finance
+      <span class="delete-icon">&#128465;</span>
+    </li>
+  </ul>
 </div>
-<div class="table-footer">
-                      <span>Showing Results 2 - 7 of 07</span>
-                      <div class="table-pagination">
-                        <button class="btn-page">
-                          <i class="fa-solid fa-chevron-left"></i> Back
-                        </button>
-                        <span class="page-num active">1</span>
-                        <span class="page-num">2</span>
-                        <span class="page-num">3</span>
-                        <span class="page-num">4</span>
-                        <button class="btn-page">
-                          Next <i class="fa-solid fa-chevron-right"></i>
-                        </button>
-                      </div>
-                    </div>
+
 
           </div>
         </div>
       </div>
     </div>
-  
-    <script defer src="./js/prompet.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/js/all.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('.subcategory-select').select2({
+        placeholder: "Select Subcategories",
+        width: '100%'
+      });
+
+      $('.delete-btn').click(function () {
+        $(this).closest('tr').remove();
+      });
+    });
+  </script>
   </body>
 </html>
