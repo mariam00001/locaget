@@ -155,16 +155,20 @@
        <a href="./upload.html" class="text-decoration-none"> <p class="step active"><i class="fa-solid fa-file me-2"></i> Attach Document <i class="fa-solid fa-chevron-right ms-3"></i></p> </a>
                <a href="./documentinfo.html" class="text-decoration-none"><p class="step "><i class="fa-solid fa-pen-to-square mx-2"></i> Document Info <i class="fa-solid fa-chevron-right ms-3"></i></p></a>
        <a href="./send.html" class="text-decoration-none"> <p class="step "><i class="fa-solid fa-check mx-2"></i>Send </p></a>
+
       </div>
 
-<div class="upload-section p-3 mt-2">
+
+
+    </div>
+    <div class="upload-section ">
 <div class="d-flex justify-content-end">
   <div class="active-font gap-2">
-    <h3>Activate OCR</h3>
+    <h3>Activate Ocr</h3>
     <div class="switch-container position-relative">
       <input type="checkbox" id="ocr-toggle" checked hidden>
       <label class="switch-label" for="ocr-toggle">
-        <h3 class="mt-2 me-5">
+        <h3 class="mt-2 me-5 ps-3">
           <span id="switch-text">ON</span>
         </h3>
       </label>
@@ -183,18 +187,16 @@
     <div class="mb-3">
      <img src="./assets/Vector (24).svg" alt="upload">
     </div>
-    <p class="text-drag">Drag and drop the file here</p>
+    <p class="text-drag"  id="upload-message">Drag and drop the file here</p>
     <button type="button" class="btn btn-dark mt-2">
       <i class="fa-solid fa-folder-open me-2"></i> Browse File
     </button>
   </div>
-  <div class="d-flex justify-content-end">
+  <div class="d-flex justify-content-end  margin-next">
 
             <button type="button" class="btn btn-outline-secondary btn-nav doc-history"> Next &gt;</button>
             </div>
 </div>
-
-    </div>
   </div>
           </div>
         </div>
@@ -203,5 +205,53 @@
 
     <script src="./js/pop.js"></script>
     <script src="./js/toggel.js"></script>
+    <script>
+  const uploadBox = document.querySelector('.upload-box');
+const browseBtn = uploadBox.querySelector('button');
+const uploadMessage = document.getElementById('upload-message');
+
+// إنشاء input مخفي
+const fileInput = document.createElement('input');
+fileInput.type = 'file';
+fileInput.hidden = true;
+document.body.appendChild(fileInput);
+
+// عند الضغط على الزرار
+browseBtn.addEventListener('click', () => {
+  fileInput.click();
+});
+
+// عند اختيار ملف من الزرار
+fileInput.addEventListener('change', () => {
+  if (fileInput.files.length > 0) {
+    uploadMessage.textContent = `✔️ ${fileInput.files[0].name}`;
+  }
+});
+
+// عند السحب على البوكس
+uploadBox.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  uploadBox.classList.add('dragover');
+});
+
+// عند مغادرة البوكس
+uploadBox.addEventListener('dragleave', () => {
+  uploadBox.classList.remove('dragover');
+});
+
+// عند إفلات الملف في البوكس
+uploadBox.addEventListener('drop', (e) => {
+  e.preventDefault();
+  uploadBox.classList.remove('dragover');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    fileInput.files = files; // نربط الملف بالـ input
+    uploadMessage.textContent = `✔️ ${files[0].name}`;
+  }
+});
+
+</script>
+
 </body>
 </html>
