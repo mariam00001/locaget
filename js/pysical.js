@@ -18,9 +18,9 @@
                 const row = document.createElement('tr');
                 row.innerHTML = `
                     <td>Room ${loc.room}</td>
-                    <td>Shelf ${loc.shelf}</td>
+                    <td class="padding-left">Shelf ${loc.shelf}</td>
                     <td>Row ${loc.row}</td>
-                    <td><button class="btn-delete" onclick="deleteLocation(${index})">Delete</button></td>
+                    <td><button class="btn-delete w-50" onclick="deleteLocation(${index})">Delete</button></td>
                 `;
                 locationTableBody.appendChild(row);
             });

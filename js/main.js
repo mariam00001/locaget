@@ -71,12 +71,15 @@ function getFileIcon(type) {
 // Function to render files table
 function renderFilesTable() {
   const tbody = document.getElementById('filesTableBody');
-  
+
   tbody.innerHTML = filesData.map(file => `
     <tr>
-      <td><input type="checkbox" class="w-25 form-check-input p-2"></td>
       <td>
-        <div class="file-item">
+        <div class="file-item ms-3">
+          <label class="custom-checkbox me-2">
+            <input type="checkbox" class="check-size me-2" />
+            <span class="custom-box"></span>
+          </label>
           <div class="file-icon ${file.type}">
             ${getFileIcon(file.type)}
           </div>
@@ -88,50 +91,165 @@ function renderFilesTable() {
       <td>
         <div class="file-date">${file.date}<br>${file.time}</div>
       </td>
-      <td>
+      <td class="text-center marg-aprove">
         <span class="status-badge ${file.status}">
           ${file.status.charAt(0).toUpperCase() + file.status.slice(1)}
         </span>
       </td>
       <td>
-        <div class="file-actions d-flex justify-content-center">
+        <div class="file-actions d-flex justify-content-center position-relative">
           <button class="btn-action">Details</button>
           <button class="btn-action">Edit</button>
-          <button class="btn-action">⋮</button>
+          <button class="bg-transparent border-0 fw-bol ms-3 toggle-menu-btn2">
+            <i class="fa-solid fa-ellipsis-vertical fa-sm"></i>
+          </button>
+
+          <div class="sidebar-menu2 bg-white p-3 rounded-3 shadow Z-3">
+            <div class="menu-item mb-3 pointer">
+              <img src="./assets/message-edit.svg" class="me-2" alt="">
+              <span class="menu-text">Rename</span>
+            </div>
+            <div class="menu-item mb-3 pointer">
+              <img src="./assets/document-favorite.svg" class="me-2" alt="">
+              <span class="menu-text">Activity</span>
+            </div>
+            <div class="menu-item mb-3 pointer">
+              <img src="./assets/user.svg" class="me-2" alt="">
+              <span class="menu-text">Details</span>
+            </div>
+            <div class="menu-item mb-3 pointer">
+              <img src="./assets/lock.svg" class="me-2" alt="">
+              <span class="menu-text">Lock</span>
+            </div>
+            <div class="menu-item mb-3 pointer">
+              <img src="./assets/2 (2).svg" class="me-2" alt="">
+              <span class="menu-text">Download</span>
+            </div>
+            <div class="menu-item mb-3 pointer">
+              <img src="./assets/star.svg" class="me-2" alt="">
+              <span class="menu-text">Add Favorite</span>
+            </div>
+            <div class="menu-item mb-3 pointer">
+              <img src="./assets/trash.svg" class="me-2" alt="">
+              <span class="menu-text">Delete</span>
+            </div>
+          </div>
         </div>
       </td>
     </tr>
   `).join('');
+
+  // Add click listeners to toggle buttons (⋮) after rendering
+  const toggleButtons = document.querySelectorAll('.toggle-menu-btn2');
+
+  toggleButtons.forEach((btn) => {
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+
+      // Close all other menus
+      document.querySelectorAll('.sidebar-menu2').forEach(menu => {
+        if (menu !== this.nextElementSibling) {
+          menu.style.display = 'none';
+        }
+      });
+
+      // Toggle current menu
+      const menu = this.nextElementSibling;
+      menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+    });
+  });
+
+  // Prevent closing menu when clicked inside it
+  document.querySelectorAll('.sidebar-menu2').forEach(menu => {
+    menu.addEventListener('click', function (e) {
+      e.stopPropagation();
+    });
+  });
 }
 
-// Function to create approval chart
-const ctx = document.getElementById('approvalChart').getContext('2d');
 
-  const chartData = {
-    labels: ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'],
-    datasets: [
-      {
-        label: 'Approved',
-        data: [50000, 100000, 600000, 200000, 30000, 500000, 300000],
-        backgroundColor: '#28a745',
-        borderRadius: 6,
-        barThickness: 14
-      },
-      {
-        label: 'Pending',
-        data: [100000, 1500000, 800000, 300000, 10000, 200000, 200000],
-        backgroundColor: '#f1c40f',
-        borderRadius: 6,
-        barThickness: 14
-      },
-      {
-        label: 'Rejected',
-        data: [90000, 120000, 300000, 70000, 10000, 700000, 250000],
-        backgroundColor: '#dc3545',
-        borderRadius: 6,
-        barThickness: 14
-      }
-    ]
+// Function to create approval chart
+ const ctx = document.getElementById('approvalChart').getContext('2d');
+
+  const chartDatasets = {
+    weekly: {
+      labels: ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'],
+      datasets: [
+        {
+          label: 'Approved',
+          data: [50000, 100000, 600000, 200000, 30000, 500000, 300000],
+          backgroundColor: '#28a745',
+          borderRadius: 6,
+          barThickness: 14
+        },
+        {
+          label: 'Pending',
+          data: [100000, 1500000, 800000, 300000, 10000, 200000, 200000],
+          backgroundColor: '#f1c40f',
+          borderRadius: 6,
+          barThickness: 14
+        },
+        {
+          label: 'Rejected',
+          data: [90000, 120000, 300000, 70000, 10000, 700000, 250000],
+          backgroundColor: '#dc3545',
+          borderRadius: 6,
+          barThickness: 14
+        }
+      ]
+    },
+    monthly: {
+      labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+      datasets: [
+        {
+          label: 'Approved',
+          data: [800000, 700000, 500000, 600000],
+          backgroundColor: '#28a745',
+          borderRadius: 6,
+          barThickness: 14
+        },
+        {
+          label: 'Pending',
+          data: [1000000, 900000, 1100000, 950000],
+          backgroundColor: '#f1c40f',
+          borderRadius: 6,
+          barThickness: 14
+        },
+        {
+          label: 'Rejected',
+          data: [200000, 150000, 250000, 100000],
+          backgroundColor: '#dc3545',
+          borderRadius: 6,
+          barThickness: 14
+        }
+      ]
+    },
+    yearly: {
+      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+      datasets: [
+        {
+          label: 'Approved',
+          data: [1000000, 1200000, 900000, 1100000, 950000, 1050000],
+          backgroundColor: '#28a745',
+          borderRadius: 6,
+          barThickness: 14
+        },
+        {
+          label: 'Pending',
+          data: [500000, 600000, 550000, 650000, 700000, 600000],
+          backgroundColor: '#f1c40f',
+          borderRadius: 6,
+          barThickness: 14
+        },
+        {
+          label: 'Rejected',
+          data: [300000, 200000, 400000, 350000, 250000, 300000],
+          backgroundColor: '#dc3545',
+          borderRadius: 6,
+          barThickness: 14
+        }
+      ]
+    }
   };
 
   const chartOptions = {
@@ -159,8 +277,8 @@ const ctx = document.getElementById('approvalChart').getContext('2d');
         max: 1500000,
         ticks: {
           stepSize: 500000,
-          callback: function(value) {
-            return value >= 1000000 ? (value / 1000000) + 'M' : value / 1000 + 'k';
+          callback: function (value) {
+            return value >= 1000000 ? (value / 1000000) + 'M' : (value / 1000) + 'k';
           },
           font: {
             size: 12
@@ -179,11 +297,27 @@ const ctx = document.getElementById('approvalChart').getContext('2d');
     }
   };
 
-  new Chart(ctx, {
+  let approvalChart = new Chart(ctx, {
     type: 'bar',
-    data: chartData,
+    data: chartDatasets.monthly, // default
     options: chartOptions
   });
+
+  document.getElementById('chartFilters').addEventListener('click', function (e) {
+    if (e.target.tagName === 'BUTTON') {
+      const type = e.target.getAttribute('data-type');
+
+      // Update chart data
+      approvalChart.data.labels = chartDatasets[type].labels;
+      approvalChart.data.datasets = chartDatasets[type].datasets;
+      approvalChart.update();
+
+      // Update active button style
+      document.querySelectorAll('#chartFilters button').forEach(btn => btn.classList.remove('button-active'));
+      e.target.classList.add('button-active');
+    }
+  });
+  
 
 // Function to animate counter numbers
 function animateCounters() {

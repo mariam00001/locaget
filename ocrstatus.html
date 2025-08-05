@@ -17,60 +17,99 @@
     <div class="wrapper">
       <div class="container-fluid ps-0">
         <div class="row">
-          <div class="col-md-1">
-            <!-- Sidebar -->
-            <nav class="sidebar position-relative">
-              <a
-                href="./index.html"
-                class="text-decoration-none text-center mb-3"
-                ><li class="text-decoration-none list-unstyled">
-                  <img src="./assets/L LOGO.svg" alt="logo" /></li
-              ></a>
-              <ul class="sidebar-menu">
-                <li class="mt-3">
-                  <a href="./index.html"
-                    ><img src="./assets/dashboard-square-01.svg" alt="category"
-                  /></a>
-                </li>
-                <li>
-                  <a href="./upload.html"
-                    ><img src="./assets/document-text.svg" alt="text"
-                  /></a>
-                </li>
-                <li>
-                  <a href="./dochistory.html" class="active"
-                    ><img src="./assets/verify.svg" alt="verify"
-                  /></a>
-                </li>
-                <li>
-                  <a href="./activitylog.html"
-                    ><img src="./assets/rotate-left.svg" alt="rotate-left"
-                  /></a>
-                </li>
-                <li>
-                  <a href="./notification.html"
-                    ><img src="./assets/setting-2.svg" alt="setting-2"
-                  /></a>
-                </li>
-                <div class="d-flex justify-content-center">
-                  <div class="position-absolute logo-slider">
-                    <li>
-                      <a href=""
-                        ><img src="./assets/help-circle.svg" alt="help-circle"
-                      /></a>
-                    </li>
-                    <li>
-                      <a href=""
-                        ><img src="./assets/elements.svg" alt="elements"
-                      /></a>
-                    </li>
-                  </div>
-                </div>
-              </ul>
-            </nav>
-          </div>
+              <div class="col-md-1 position-relative">
+  <!-- Sidebar -->
+  <nav id="sidebar" class="sidebar collapsed  position-absolute">
+<div class="text-center mb-2 d-flex justify-content-center ">
+  <a href="./index.html" class="text-decoration-none ms-0 ps-0"><img src="./assets/Logo 1.svg" alt="logo" class="sidebar-logo mb-3 mt-4 expanded-only pointer" /></a>
+  <a href="./index.html" class="text-decoration-none ms-1 ps-0"><img src="./assets/Frame 2078547825 1.svg" alt="" class="collapsed-only  mb-1 mt-4 pointer" /></a>
+</div>
 
-          <div class="col-md-11 position-relative">
+    <ul class="sidebar-menu mt-1">
+      <li class="mt-1 has-submenu">
+  <a href="#" class="menu-toggle  ">
+    <img src="./assets/dashboard-square-01.svg" class="me-3" />
+    <span class="sidebar-text">Dashboard</span>
+  </a>
+
+
+  <ul class="submenu list-unstyled ms-4">
+    <li class="mt-2">
+      <a href="#" >
+        <img src="./assets/dollar-circle.svg" class="me-2" />
+        <span class="sidebar-text">Sales</span>
+      </a>
+    </li>
+    <li class="mt-2">
+      <a href="#">
+       <img src="./assets/trend-up.svg" class="me-2 img-grey" />
+
+        <span class="sidebar-text">Finance </span>
+      </a>
+    </li>
+       <li class="mt-2">
+      <a href="#">
+        <img src="./assets/status-up.svg" class="me-2" />
+        <span class="sidebar-text">Marketing </span>
+      </a>
+    </li>
+  </ul>
+</li>
+
+      <li class="has-submenu">
+        <a href="./upload.html" class="menu-toggle "> 
+          <img src="./assets/document-text2.svg" class="me-3" />
+          <span class="sidebar-text">Documents</span>
+        </a>
+          <ul class="submenu list-unstyled ms-4">
+    <li class="mt-2">
+      <a href="#" >
+        <img src="./assets/dollar-circle.svg" class="me-2" />
+        <span class="sidebar-text">Sales</span>
+      </a>
+    </li>
+    <li class="mt-2">
+      <a href="#">
+       <img src="./assets/trend-up.svg" class="me-2 img-grey" />
+
+        <span class="sidebar-text">Finance </span>
+      </a>
+    </li>
+       <li class="mt-2">
+      <a href="#">
+        <img src="./assets/status-up.svg" class="me-2" />
+        <span class="sidebar-text">Marketing </span>
+      </a>
+    </li>
+  </ul>
+      </li>
+      <li>
+        <a href="./dochistory.html" class="" >
+          <img src="./assets/verify.svg" class="me-3" />
+          <span class="sidebar-text">Approval</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="active">
+          <img src="./assets/rotate-left.svg" class="me-3" />
+          <span class="sidebar-text">Activity Log</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="./assets/setting-2.svg" class="me-3" />
+          <span class="sidebar-text">Settings</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="bottom-icons text-center mt-auto">
+      <a href="#"><img src="./assets/help-circle.svg" /><span class="sidebar-text">Help</span></a>
+      <a href="#" id="toggleSidebar"><img src="./assets/elements.svg" /><span class="sidebar-text">Collapse </span></a>
+    </div>
+  </nav>
+         </div>
+          <div class="col-md-11 position-relative" style="min-height: 120vh;">
             <img
               src="./assets/Logo 2.svg"
               class="mt-4 mt-md-3 ms-3 ms-md-0"
@@ -78,134 +117,89 @@
             />
             <!-- Header -->
             <header
-              class="header d-md-flex justify-content-between align-items-center"
-            >
-              <div class="header-left">
-                <div class="search-box">
-                  <i class="fas fa-search"></i>
-                  <input type="text" placeholder="Search" />
+                class="header d-md-flex justify-content-between align-items-center"
+              >
+                <div class="header-left">
+                  <a href="./search.html" class="text-decoration-none text-muted"> <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search" />
+                  </div></a>
+                 
                 </div>
-              </div>
-              <div class="header-right mt-lg-0 mt-5 position-relative">
-                <img src="./assets/Logo.svg" alt="logo" />
-                <div class="notification-badge">
-                  <i class="fas fa-bell"></i>
-                  <span class="badge">5</span>
-                </div>
-                <div class="user-avatar ps-2">
-                  <img
-                    src="./assets/97baf907c0c14b0ffd910004086ee5821fbb6b33.jpg"
-                    class="user"
-                    alt="User"
-                  />
-                  <div class="d-flex justify-content-between">
-                    <div class="user-info me-2">
-                      <span class="name">Jacob Mohamed</span>
-                      <span class="role">CEO</span>
-                    </div>
-                    <i class="fa-solid fa-caret-down" id="toggleDropdown"></i>
-                    <div class="postion-relative">
-                      <div class="pop p-4 d-none" id="dropdownMenu">
+                <div class="header-right mt-lg-0 mt-5 position-relative">
+                  
+                     <img src="./assets/Logo.svg" alt="logo" />
+                     <a href="./notification.html" class="text-decoration-none">
+                  <div class="notification-badge">
+                    <img src="./assets/notification.svg" alt="">
+                    <span class="badge">5</span>
+                  </div>
+                  </a>
+                 
+                  <div class="user-avatar ps-2">
+                    <img
+                      src="./assets/97baf907c0c14b0ffd910004086ee5821fbb6b33.jpg"
+                      class="user"
+                      alt="User"
+                    />
+                    <div class=" d-flex justify-content-between pointer " id="toggleDropdown">
+                      <div class="user-info me-2">
+                        <span class="name">Jacob Mohamed</span>
+                        <span class="role">CEO</span>
+                      </div>
+                      <i class="fa-solid fa-caret-down pointer"  id="toggleDropdown"></i>
+                      <div class="postion-relative">
+                      <div class="pop p-4 d-none"  id="dropdownMenu">
                         <div class="d-flex align-items-center">
                           <img
                             src="./assets/97baf907c0c14b0ffd910004086ee5821fbb6b33.jpg"
                             alt=""
                           />
-                          <div class="ms-3">
+                          <div class="ms-3" >
                             <h3>Jacob Mohamed</h3>
                             <h4>Jacob123mo@gmail.com</h4>
                           </div>
                         </div>
                         <div class="d-flex justify-content-between mt-3 mb-2">
-                          <h6>
-                            <i
-                              class="fa-solid fa-user me-2"
-                              style="color: #9e9e9e"
-                            ></i
-                            >My Profile
-                          </h6>
-                          <i class="fa-solid fa-chevron-right"></i>
+                          <h6><i class="fa-solid fa-user me-2" style="color: #9E9E9E;"></i>My Profile</h6>
+                          <i class="fa-solid fa-chevron-right pointer"></i>
                         </div>
                         <div class="d-flex justify-content-between mb-2">
-                          <h6>
-                            <i
-                              class="fa-solid fa-earth-americas me-2"
-                              style="color: #9e9e9e"
-                            ></i
-                            >English(U.S)
-                          </h6>
-                          <i
-                            class="fa-solid fa-chevron-right"
-                            id="toggleDropdown2"
-                          ></i>
+                          <h6><i class="fa-solid fa-earth-americas me-2" style="color: #9E9E9E;"></i>English(U.S)</h6>
+                          <i class="fa-solid fa-chevron-right pointer" id="toggleDropdown2"></i>
                         </div>
                         <div class="d-flex justify-content-between mb-2">
-                          <h6>
-                            <i
-                              class="fa-solid fa-circle-info me-2"
-                              style="color: #9e9e9e"
-                            ></i
-                            >Help
-                          </h6>
-                          <i class="fa-solid fa-chevron-right"></i>
+                          <h6><i class="fa-solid fa-circle-info me-2" style="color: #9E9E9E;"></i>Help</h6>
+                          <i class="fa-solid fa-chevron-right pointer"></i>
                         </div>
                       </div>
                       <div class="language p-4 d-none" id="dropdownMenu2">
-                        <h3 class="mb-3">
-                          <i
-                            class="fa-solid fa-angle-left me-2"
-                            id="closeLanguage"
-                            style="color: #9e9e9e"
-                          ></i
-                          >Change Language
-                        </h3>
+                        <h3 class="mb-3"><i class="fa-solid fa-angle-left me-2 pointer" id="closeLanguage" style="color: #9E9E9E;"></i>Change Language </h3>
                         <div class="">
                           <div class="d-flex justify-content-between mb-2">
-                            <h6>
-                              <img
-                                src="./assets/Flags.svg"
-                                class="me-2"
-                                alt=""
-                              />French
-                            </h6>
-                            <input
-                              type="checkbox"
-                              class="form-check-input ms-2"
-                            />
+                              <h6><img src="./assets/Flags.svg" class="me-2" alt="">French</h6>
+                              <input type="checkbox" class="form-check-input ms-2" >
                           </div>
                           <div class="d-flex justify-content-between mb-2">
-                            <h6>
-                              <img
-                                src="./assets/Flags (1).svg"
-                                class="me-2"
-                                alt=""
-                              />English(U.S)
-                            </h6>
-                            <input
-                              type="checkbox"
-                              class="form-check-input ms-2"
-                            />
+                               <h6><img src="./assets/Flags (1).svg" class="me-2" alt="">English(U.S)</h6>
+                              <input type="checkbox" class="form-check-input ms-2" >
                           </div>
                           <div class="d-flex justify-content-between mb-2">
-                            <h6>
-                              <img
-                                src="./assets/Flags (2).svg"
-                                class="me-2"
-                                alt=""
-                              />Arabic
-                            </h6>
-                            <input
-                              type="checkbox"
-                              class="form-check-input ms-2"
-                            />
+                          <h6><img src="./assets/Flags (2).svg" class="me-2" alt="">Arabic </h6>
+                              <input type="checkbox" class="form-check-input ms-2" >
                           </div>
+                        
+                         
+
                         </div>
+
+                        
+                      </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </header>
+              </header>
              <div class="pt-2 position-relative">
     <div class="form-section">
 
@@ -213,20 +207,40 @@
 
 
 
+<div class="d-flex justify-content-between">
 
   <label class="form-label fw-semibold text-muted">
     <img src="./assets/Vector (25).svg" alt=""> Upload File
   </label>
+  <div class="d-flex mb-3">
+  <!-- Date Picker -->
+<button id="singleDateBtn" class="btn border px-3 py-2 d-flex align-items-center gap-2 text-muted">
+  <i class="fas fa-calendar-alt"></i>
+  <span id="singleDateText">01/08/2025</span>
+  <i class="fas fa-chevron-down"></i>
+</button>
 
-  <div class="upload-box border border-dashed rounded-3 text-center p-5">
+
+
+  <!-- Filter Icon Button -->
+  <button class="btn border  p-2 text-muted ms-3">
+    <img src="./assets/setting-4.svg" alt="">
+  </button>
+  </div>
+</div>
+
+  
+<form action="">
+  <div class="upload-box border border-dashed rounded-3 text-center p-5 bg-transparent">
     <div class="mb-3">
      <img src="./assets/Vector (24).svg" alt="upload">
     </div>
-    <p class="text-drag">Drag and drop the file here</p>
+    <p class="text-drag"  id="upload-message">Drag and drop the file here</p>
     <button type="button" class="btn btn-dark mt-2">
-      <i class="fa-solid fa-folder-open me-2"></i> Browse File
+      <img src="./assets/folder-open.svg" alt=""> Browse File
     </button>
   </div>
+</form>
 
 </div>
 
@@ -236,13 +250,83 @@
               <table class="files-table">
                 <thead>
                   <tr>
-                    <th>File Name</th>
-                    <th>No.of Docs</th>
-                    <th>Start Date </th>
+                    <th>   <div class="d-flex align-items-center gap-1 margin-left">
+                          <label class="custom-checkbox me-2">
+                            <input type="checkbox" class="check-size me-2" />
+                            <span class="custom-box"></span>
+                          </label>
+                          <div class="file-name">File Name</div>
+                          <div
+                            class="sort-toggle d-flex flex-column ms-2"
+                            style="cursor: pointer"
+                          >
+                            <i
+                              class="fas fa-chevron-up text-muted toggle-up"
+                              style="font-size: 10px"
+                            ></i>
+                            <i
+                              class="fas fa-chevron-down text-muted toggle-down"
+                              style="font-size: 10px"
+                            ></i>
+                          </div>
+                        </div></th>
+                    <th>  <div class="d-flex align-items-center gap-1 margin3">No.of Docs
+                      <div
+                            class="sort-toggle d-flex flex-column ms-2"
+                            style="cursor: pointer"
+                          >
+                            <i
+                              class="fas fa-chevron-up text-muted toggle-up"
+                              style="font-size: 10px"
+                            ></i>
+                            <i
+                              class="fas fa-chevron-down text-muted toggle-down"
+                              style="font-size: 10px"
+                            ></i>
+                          </div>
+                        </div></th>
+                    <th>  <div class="d-flex align-items-center gap-1 margin3">Start Date <div
+                            class="sort-toggle d-flex flex-column ms-2"
+                            style="cursor: pointer"
+                          >
+                            <i
+                              class="fas fa-chevron-up text-muted toggle-up"
+                              style="font-size: 10px"
+                            ></i>
+                            <i
+                              class="fas fa-chevron-down text-muted toggle-down"
+                              style="font-size: 10px"
+                            ></i>
+                          </div></div></th>
 
-                    <th>End Date</th>
+                    <th>  <div class="d-flex align-items-center gap-1 margin3">End Date<div
+                            class="sort-toggle d-flex flex-column ms-2"
+                            style="cursor: pointer"
+                          >
+                            <i
+                              class="fas fa-chevron-up text-muted toggle-up"
+                              style="font-size: 10px"
+                            ></i>
+                            <i
+                              class="fas fa-chevron-down text-muted toggle-down"
+                              style="font-size: 10px"
+                            ></i>
+                          </div>
+                        </div></th>
 
-                    <th class="d-flex justify-content-center">Status</th>
+                    <th class="d-flex justify-content-center">  <div class="d-flex align-items-center gap-1 margin3">Status<div
+                            class="sort-toggle d-flex flex-column ms-2"
+                            style="cursor: pointer"
+                          >
+                            <i
+                              class="fas fa-chevron-up text-muted toggle-up"
+                              style="font-size: 10px"
+                            ></i>
+                            <i
+                              class="fas fa-chevron-down text-muted toggle-down"
+                              style="font-size: 10px"
+                            ></i>
+                          </div></div></th>
                   </tr>
                 </thead>
               <tbody id="filesTableBody">
@@ -466,21 +550,33 @@
                 </tbody>
               </table>
 
-              <div class="table-footer">
-                <span>Showing Results 2 - 7 of 07</span>
-                <div class="table-pagination">
-                  <button class="btn-page">
-                    <i class="fa-solid fa-chevron-left"></i> Back
-                  </button>
-                  <span class="page-num active">1</span>
-                  <span class="page-num">2</span>
-                  <span class="page-num">3</span>
-                  <span class="page-num">4</span>
-                  <button class="btn-page">
-                    Next <i class="fa-solid fa-chevron-right"></i>
-                  </button>
-                </div>
-              </div>
+             <div class="table-footer">
+                      <span class="d-flex text-black">Showing Results 2 <div
+                            class="sort-toggle d-flex flex-column mx-3"
+                            style="cursor: pointer"
+                          >
+                            <i
+                              class="fas fa-chevron-up text-muted "
+                              style="font-size: 10px"
+                            ></i>
+                            <i
+                              class="fas fa-chevron-down text-muted "
+                              style="font-size: 10px"
+                            ></i>
+                          </div> 7 of 07</span>
+                      <div class="table-pagination">
+                        <button class="btn-page bg-transparent">
+                          <i class="fa-solid fa-chevron-left"></i> Back
+                        </button>
+                        <span class="page-num active">1</span>
+                        <span class="page-num">2</span>
+                        <span class="page-num">3</span>
+                        <span class="page-num">4</span>
+                        <button class="btn-page bg-transparent">
+                          Next <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                      </div>
+                    </div>
             </div>
   </div>
           </div>
@@ -488,6 +584,128 @@
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/counter.js"></script>
+    <script src="./js/chart.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/pop.js"></script>
+ <script>
+  const tableBody = document.getElementById("filesTableBody");
 
+  document.querySelectorAll(".sort-toggle").forEach((toggle) => {
+    const up = toggle.querySelector(".toggle-up");
+    const down = toggle.querySelector(".toggle-down");
+
+    up.addEventListener("click", () => {
+      // إخفاء التيبول بطريقة آمنة
+      tableBody.style.opacity = "0";
+      tableBody.style.pointerEvents = "none";
+    });
+
+    down.addEventListener("click", () => {
+      // إظهار التيبول
+      tableBody.style.opacity = "1";
+      tableBody.style.pointerEvents = "auto";
+    });
+  });
+</script>
+
+<script>
+  document.querySelectorAll('.toggle-menu-btn').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      const currentMenu = this.parentElement.querySelector('.sidebar-menu2');
+
+      // اقفل كل القوائم التانية
+      document.querySelectorAll('.sidebar-menu2').forEach(menu => {
+        if (menu !== currentMenu) {
+          menu.classList.remove('show');
+          setTimeout(() => {
+            menu.style.display = 'none';
+          }, 300);
+        }
+      });
+
+      const isVisible = currentMenu.classList.contains('show');
+
+      if (isVisible) {
+        currentMenu.classList.remove('show');
+        setTimeout(() => {
+          currentMenu.style.display = 'none';
+        }, 300);
+      } else {
+        currentMenu.style.display = 'block';
+        setTimeout(() => {
+          currentMenu.classList.add('show');
+        }, 10);
+      }
+    });
+  });
+
+
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.sidebar-menu2').forEach(menu => {
+      if (menu.classList.contains('show')) {
+        menu.classList.remove('show');
+        setTimeout(() => {
+          menu.style.display = 'none';
+        }, 300);
+      }
+    });
+  });
+</script>
+    <script>
+  const uploadBox = document.querySelector('.upload-box');
+const browseBtn = uploadBox.querySelector('button');
+const uploadMessage = document.getElementById('upload-message');
+
+
+const fileInput = document.createElement('input');
+fileInput.type = 'file';
+fileInput.hidden = true;
+document.body.appendChild(fileInput);
+
+
+browseBtn.addEventListener('click', () => {
+  fileInput.click();
+});
+
+
+fileInput.addEventListener('change', () => {
+  if (fileInput.files.length > 0) {
+    uploadMessage.textContent = `✔️ ${fileInput.files[0].name}`;
+  }
+});
+
+
+uploadBox.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  uploadBox.classList.add('dragover');
+});
+
+
+uploadBox.addEventListener('dragleave', () => {
+  uploadBox.classList.remove('dragover');
+});
+
+
+uploadBox.addEventListener('drop', (e) => {
+  e.preventDefault();
+  uploadBox.classList.remove('dragover');
+  
+  const files = e.dataTransfer.files;
+  if (files.length > 0) {
+    fileInput.files = files; 
+    uploadMessage.textContent = `✔️ ${files[0].name}`;
+  }
+});
+
+</script>
+    <script>
+  document.getElementById('toggleSidebar').addEventListener('click', function () {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('collapsed');
+  });
+</script>
   </body>
 </html>

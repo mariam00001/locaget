@@ -17,84 +17,133 @@
     <div class="wrapper">
       <div class="container-fluid ps-0">
         <div class="row">
-          <div class="col-md-1">
-            <!-- Sidebar -->
-                 <nav class="sidebar position-relative">
-               <a href="./index.html" class="text-decoration-none text-center mb-3"
-                  ><li class="text-decoration-none list-unstyled "><img src="./assets/L LOGO.svg" alt="logo" /></li
-                ></a>
-              <ul class="sidebar-menu">
-                 
-                <li class="mt-3">
-                  <a href="./index.html" 
-                    ><img src="./assets/dashboard-square-01.svg" alt="category"
-                  /></a>
-                </li>
-                <li>
-                  <a href="./upload.html" 
-                    ><img src="./assets/document-text.svg" alt="text"
-                  /></a>
-                </li>
-                <li>
-                  <a href="./dochistory.html" class="active"><img src="./assets/verify.svg" alt="verify" /></a>
-                </li>
-                <li>
-                  <a href="./activitylog.html"
-                    ><img src="./assets/rotate-left.svg" alt="rotate-left"
-                  /></a>
-                </li>
-                <li>
-                  <a href=""
-                    ><img src="./assets/setting-2.svg" alt="setting-2"
-                  /></a>
-                </li>
-                <div class="d-flex justify-content-center">
-                  <div class="position-absolute logo-slider">
-                    <li>
-                      <a href=""
-                        ><img src="./assets/help-circle.svg" alt="help-circle"
-                      /></a>
-                    </li>
-                    <li>
-                      <a href=""
-                        ><img src="./assets/elements.svg" alt="elements"
-                      /></a>
-                    </li>
-                  </div>
-                </div>
-              </ul>
-            </nav>
-          </div>
+          <div class="col-md-1 position-relative">
+  <!-- Sidebar -->
+  <nav id="sidebar" class="sidebar collapsed  position-absolute">
+<div class="text-center mb-2 d-flex justify-content-center ">
+  <a href="./index.html" class="text-decoration-none ms-0 ps-0"><img src="./assets/Logo 1.svg" alt="logo" class="sidebar-logo mb-3 mt-4 expanded-only pointer" /></a>
+  <a href="./index.html" class="text-decoration-none ms-1 ps-0"><img src="./assets/Frame 2078547825 1.svg" alt="" class="collapsed-only  mb-1 mt-4 pointer" /></a>
+</div>
 
-          <div class="col-md-11">
+    <ul class="sidebar-menu mt-1">
+      <li class="mt-1 has-submenu">
+  <a href="#" class="menu-toggle  ">
+    <img src="./assets/dashboard-square-01.svg" class="me-3" />
+    <span class="sidebar-text">Dashboard</span>
+  </a>
+
+
+  <ul class="submenu list-unstyled ms-4">
+    <li class="mt-2">
+      <a href="#" >
+        <img src="./assets/dollar-circle.svg" class="me-2" />
+        <span class="sidebar-text">Sales</span>
+      </a>
+    </li>
+    <li class="mt-2">
+      <a href="#">
+       <img src="./assets/trend-up.svg" class="me-2 img-grey" />
+
+        <span class="sidebar-text">Finance </span>
+      </a>
+    </li>
+       <li class="mt-2">
+      <a href="#">
+        <img src="./assets/status-up.svg" class="me-2" />
+        <span class="sidebar-text">Marketing </span>
+      </a>
+    </li>
+  </ul>
+</li>
+
+      <li class="has-submenu">
+        <a href="./upload.html" class="menu-toggle"> 
+          <img src="./assets/document-text2.svg" class="me-3" />
+          <span class="sidebar-text">Documents</span>
+        </a>
+          <ul class="submenu list-unstyled ms-4">
+    <li class="mt-2">
+      <a href="#" >
+        <img src="./assets/dollar-circle.svg" class="me-2" />
+        <span class="sidebar-text">Sales</span>
+      </a>
+    </li>
+    <li class="mt-2">
+      <a href="#">
+       <img src="./assets/trend-up.svg" class="me-2 img-grey" />
+
+        <span class="sidebar-text">Finance </span>
+      </a>
+    </li>
+       <li class="mt-2">
+      <a href="#">
+        <img src="./assets/status-up.svg" class="me-2" />
+        <span class="sidebar-text">Marketing </span>
+      </a>
+    </li>
+  </ul>
+      </li>
+      <li>
+        <a href="./dochistory.html" class="active">
+          <img src="./assets/verify.svg" class="me-3" />
+          <span class="sidebar-text">Approval</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="./assets/rotate-left.svg" class="me-3" />
+          <span class="sidebar-text">Activity Log</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="./assets/setting-2.svg" class="me-3" />
+          <span class="sidebar-text">Settings</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="bottom-icons text-center mt-auto">
+      <a href="#"><img src="./assets/help-circle.svg" /><span class="sidebar-text">Help</span></a>
+      <a href="#" id="toggleSidebar"><img src="./assets/elements.svg" /><span class="sidebar-text">Collapse </span></a>
+    </div>
+  </nav>
+         </div>
+
+          <div class="col-md-11 position-relative" style="min-height: 120vh;">
             <img
               src="./assets/Logo 2.svg"
               class="mt-4 mt-md-3 ms-3 ms-md-0"
               alt="LocGet"
             />
             <!-- Header -->
-           <header
+          <header
                 class="header d-md-flex justify-content-between align-items-center"
               >
                 <div class="header-left">
-                  <div class="search-box">
+                  <a href="./search.html" class="text-decoration-none text-muted"> <div class="search-box">
                     <i class="fas fa-search"></i>
                     <input type="text" placeholder="Search" />
-                  </div>
+                  </div></a>
+                 
                 </div>
                 <div class="header-right mt-lg-0 mt-5 position-relative">
-                  <img src="./assets/Logo.svg" alt="logo" />
+                  
+                     <img src="./assets/Logo.svg" alt="logo" />
+                     <a href="./notification.html" class="text-decoration-none">
                   <div class="notification-badge">
-                    <i class="fas fa-bell"></i>
+                    <img src="./assets/notification.svg" alt="">
                     <span class="badge">5</span>
                   </div>
+                  </a>
+                 
                   <div class="user-avatar ps-2">
                     <img
                       src="./assets/97baf907c0c14b0ffd910004086ee5821fbb6b33.jpg"
                       class="user"
                       alt="User"
                     />
-                    <div class=" d-flex justify-content-between ">
+                    <div class=" d-flex justify-content-between pointer " id="toggleDropdown">
                       <div class="user-info me-2">
                         <span class="name">Jacob Mohamed</span>
                         <span class="role">CEO</span>
@@ -107,7 +156,7 @@
                             src="./assets/97baf907c0c14b0ffd910004086ee5821fbb6b33.jpg"
                             alt=""
                           />
-                          <div class="ms-3">
+                          <div class="ms-3" >
                             <h3>Jacob Mohamed</h3>
                             <h4>Jacob123mo@gmail.com</h4>
                           </div>
@@ -156,48 +205,56 @@
               <div class="d-flex justify-content-between mt-4">
               <h3>Documents version history</h3>
                  <div class=" mb-3">
-           <button class="close-btn"><i class="fa-solid fa-x me-2"></i>close</button>
+           <button class="close-btn"><a href="./index.html" class="text-decoration-none text-muted"><i class="fa-solid fa-x me-2"></i>close</a></button>
       </div>
       </div>
               <div class="files-table-container  ">
                 <div class="table-controls position-relative px-5 px-md-0 ">
-                  <div class="search-box">
+                  <div class="search-box me-5">
                   <i class="fas fa-search d-none d-md-flex"></i>
-                  <input type="text" placeholder="Search" />
+                  <input type="text" placeholder="Search documents, people, tags..." />
                 </div>
-                  <table class="table-filters  ">
+                  <table class="table-filters   ">
                        <!-- <select class="form-select">
                       <option></option>
                       <option>Approved</option>
                       <option>Pending</option>
                       <option>Rejected</option>
                     </select> -->
-                    <button class="btn-show w-100">Show favorites</button>
-                    <select class="form-select">
-                      <option>Status</option>
-                      <option>Approved</option>
-                      <option>Pending</option>
-                      <option>Rejected</option>
-                    </select>
-                    <select class="form-select">
-                      <option>File Type</option>
-                      <option>PDF</option>
-                      <option>DOC</option>
-                      <option>XLS</option>
-                    </select>
-                    <select class="form-select">
-                      <option>Date</option>
-                    </select>
+                    <button class="btn-show bg-transparent border text-muted ms-5">Show favorites</button>
+                     <select class="form-select border text-muted ">
+                          <option>Status</option>
+                          <option>Approved</option>
+                          <option>Pending</option>
+                          <option>Rejected</option>
+                        </select>
+                        <select class="form-select border text-muted">
+                          <option>File Type</option>
+                          <option>PDF</option>
+                          <option>DOC</option>
+                          <option>XLS</option>
+                        </select>
+                  <div class="custom-date ">
+  <input type="date" id="dateInput" />
+  <div class="date-display border text-muted">
+    <span id="dateText">Date</span>
+    <i class="fa-regular fa-calendar-days calendar-icon"></i>
+  </div>
+</div>
+                      <button class="btn border  p-2 text-muted">
+    <img src="./assets/setting-4.svg" alt="">
+  </button>
                   </table>
                 </div>
 
+  <div class="table-wrapper rounded-3 border overflow-hidden ">
                 <table class="files-table doc-table bg-white ">
                   <thead>
                     <tr class="bg-white">
                       <th>File Name</th>
                       <th>Submitted by</th>
                       <th>Date</th>
-                      <th>Last Update</th>
+                      <th class="px-5">Last Update</th>
                       <th>Category</th>
                       <th class="text-center">Version</th>
                       <th class="text-center">Tages</th>
@@ -219,13 +276,13 @@
                               alt="user"
                             />
                           </div>
-                          <div>Fouad Mohamed <br />General Manager</div>
+                          <div>Fouad Mohamed <br /><span class="activity-role">General Manager</span></div>
                         </div>
                       </td>
                       <td>
                         <div>12/5/2024 <br />11:00pm</div>
                       </td>
-                      <td >
+                      <td class="px-5">
                         <div >12/5/2024 <br />11:00pm</div>
                       </td>
                        <td>
@@ -239,16 +296,49 @@
                       <option>0.8</option>
                     </select>
                       </td>
-                      <td >
-                        <div>Desgin, law , science</div>
+                      <td  >
+                        <div >Desgin, law , science</div>
                       </td>
 
-                      <td >
-                        <div class="d-flex justify-content-between align-items-center">
+                      <td class="position-relative">
+                        <div class="d-flex align-items-center ">
                             <button class="status-badge approved border-0">
                               Approved
                             </button>
-                            <button class="btn-action">⋮</button>
+                          <button class="bg-transparent border-0 ms-4 fw-bol ms-3 toggle-menu-btn">
+            <i class="fa-solid fa-ellipsis-vertical fa-sm"></i>
+                         </button>
+          
+    <div class="sidebar-menu2 bg-white p-3 rounded-3 shadow" style="display: none;" >
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/message-edit.svg" class="me-2" alt="">
+        <span class="menu-text">Rename</span>
+      </div>
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/document-favorite.svg" class="me-2" alt="">
+        <span class="menu-text">Activity</span>
+      </div>
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/user.svg" class="me-2" alt="">
+        <span class="menu-text">Details</span>
+      </div>
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/lock.svg" class="me-2" alt="">
+        <span class="menu-text">Lock</span>
+      </div>
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/2 (2).svg" class="me-2" alt="">
+        <span class="menu-text">Download</span>
+      </div>
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/star.svg" class="me-2" alt="">
+        <span class="menu-text">Add Favorite</span>
+      </div>
+      <div class="menu-item mb-1 pointer">
+        <img src="./assets/trash.svg" class="me-2" alt="">
+        <span class="menu-text">Delete</span>
+      </div>
+    </div>
 
                         </div>
 
@@ -269,13 +359,13 @@
                               alt="user"
                             />
                           </div>
-                          <div>Fouad Mohamed <br />General Manager</div>
+                          <div>Fouad Mohamed <br /><span class="activity-role">General Manager</span></div>
                         </div>
                       </td>
                       <td>
                         <div>12/5/2024 <br />11:00pm</div>
                       </td>
-                      <td>
+                      <td class="px-5">
                         <div>12/5/2024 <br />11:00pm</div>
                       </td>
                        <td>
@@ -294,11 +384,44 @@
                       </td>
 
                       <td >
-                        <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex  align-items-center  position-relative">
                             <button class="status-badge approved border-0">
                               Approved
                             </button>
-                            <button class="btn-action">⋮</button>
+                             <button class="bg-transparent border-0 ms-4 fw-bol ms-3 toggle-menu-btn">
+            <i class="fa-solid fa-ellipsis-vertical fa-sm"></i>
+                         </button>
+          
+    <div class="sidebar-menu2 bg-white p-3 rounded-3 shadow" style="display: none;" >
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/message-edit.svg" class="me-2" alt="">
+        <span class="menu-text">Rename</span>
+      </div>
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/document-favorite.svg" class="me-2" alt="">
+        <span class="menu-text">Activity</span>
+      </div>
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/user.svg" class="me-2" alt="">
+        <span class="menu-text">Details</span>
+      </div>
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/lock.svg" class="me-2" alt="">
+        <span class="menu-text">Lock</span>
+      </div>
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/2 (2).svg" class="me-2" alt="">
+        <span class="menu-text">Download</span>
+      </div>
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/star.svg" class="me-2" alt="">
+        <span class="menu-text">Add Favorite</span>
+      </div>
+      <div class="menu-item mb-1 pointer">
+        <img src="./assets/trash.svg" class="me-2" alt="">
+        <span class="menu-text">Delete</span>
+      </div>
+    </div>
 
                         </div>
 
@@ -319,13 +442,13 @@
                               alt="user"
                             />
                           </div>
-                          <div>Fouad Mohamed <br />General Manager</div>
+                          <div>Fouad Mohamed <br /><span class="activity-role">General Manager</span></div>
                         </div>
                       </td>
                       <td>
                         <div>12/5/2024 <br />11:00pm</div>
                       </td>
-                      <td>
+                      <td class="px-5">
                         <div>12/5/2024 <br />11:00pm</div>
                       </td>
                        <td>
@@ -344,11 +467,44 @@
                       </td>
 
                       <td >
-                        <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex  align-items-center  position-relative">
                             <button class="status-badge approved border-0">
                               Approved
                             </button>
-                            <button class="btn-action">⋮</button>
+                          <button class="bg-transparent border-0 ms-4 fw-bol ms-3 toggle-menu-btn">
+            <i class="fa-solid fa-ellipsis-vertical fa-sm"></i>
+                         </button>
+          
+    <div class="sidebar-menu2 bg-white p-3 rounded-3 shadow" style="display: none;" >
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/message-edit.svg" class="me-2" alt="">
+        <span class="menu-text">Rename</span>
+      </div>
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/document-favorite.svg" class="me-2" alt="">
+        <span class="menu-text">Activity</span>
+      </div>
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/user.svg" class="me-2" alt="">
+        <span class="menu-text">Details</span>
+      </div>
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/lock.svg" class="me-2" alt="">
+        <span class="menu-text">Lock</span>
+      </div>
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/2 (2).svg" class="me-2" alt="">
+        <span class="menu-text">Download</span>
+      </div>
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/star.svg" class="me-2" alt="">
+        <span class="menu-text">Add Favorite</span>
+      </div>
+      <div class="menu-item mb-1 pointer">
+        <img src="./assets/trash.svg" class="me-2" alt="">
+        <span class="menu-text">Delete</span>
+      </div>
+    </div>
 
                         </div>
 
@@ -369,13 +525,13 @@
                               alt="user"
                             />
                           </div>
-                          <div>Fouad Mohamed <br />General Manager</div>
+                          <div>Fouad Mohamed <br /><span class="activity-role">General Manager</span></div>
                         </div>
                       </td>
                       <td>
                         <div>12/5/2024 <br />11:00pm</div>
                       </td>
-                      <td>
+                      <td class="px-5">
                         <div>12/5/2024 <br />11:00pm</div>
                       </td>
                        <td>
@@ -394,11 +550,44 @@
                       </td>
 
                       <td >
-                        <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex  align-items-center  position-relative">
                             <button class="status-badge approved border-0">
                               Approved
                             </button>
-                            <button class="btn-action">⋮</button>
+              <button class="bg-transparent border-0 ms-4 fw-bol ms-3 toggle-menu-btn">
+            <i class="fa-solid fa-ellipsis-vertical fa-sm"></i>
+                         </button>
+          
+    <div class="sidebar-menu2 bg-white p-3 rounded-3 shadow" style="display: none;" >
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/message-edit.svg" class="me-2" alt="">
+        <span class="menu-text">Rename</span>
+      </div>
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/document-favorite.svg" class="me-2" alt="">
+        <span class="menu-text">Activity</span>
+      </div>
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/user.svg" class="me-2" alt="">
+        <span class="menu-text">Details</span>
+      </div>
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/lock.svg" class="me-2" alt="">
+        <span class="menu-text">Lock</span>
+      </div>
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/2 (2).svg" class="me-2" alt="">
+        <span class="menu-text">Download</span>
+      </div>
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/star.svg" class="me-2" alt="">
+        <span class="menu-text">Add Favorite</span>
+      </div>
+      <div class="menu-item mb-1 pointer">
+        <img src="./assets/trash.svg" class="me-2" alt="">
+        <span class="menu-text">Delete</span>
+      </div>
+    </div>
 
                         </div>
 
@@ -419,13 +608,13 @@
                               alt="user"
                             />
                           </div>
-                          <div>Fouad Mohamed <br />General Manager</div>
+                          <div>Fouad Mohamed <br /><span class="activity-role">General Manager</span></div>
                         </div>
                       </td>
                       <td>
                         <div>12/5/2024 <br />11:00pm</div>
                       </td>
-                      <td>
+                      <td class="px-5">
                         <div>12/5/2024 <br />11:00pm</div>
                       </td>
                        <td>
@@ -444,11 +633,44 @@
                       </td>
 
                       <td >
-                        <div class="d-flex justify-content-between align-items-center">
-                            <button class="status-badge approved border-0">
-                              Approved
+                        <div class="d-flex align-items-center position-relative">
+                            <button class="status-badge pending  border-0">
+                              Pending 
                             </button>
-                            <button class="btn-action">⋮</button>
+     <button class="bg-transparent border-0 ms-4 fw-bol ms-3 toggle-menu-btn">
+            <i class="fa-solid fa-ellipsis-vertical fa-sm"></i>
+                         </button>
+          
+    <div class="sidebar-menu2 bg-white p-3 rounded-3 shadow" style="display: none;" >
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/message-edit.svg" class="me-2" alt="">
+        <span class="menu-text">Rename</span>
+      </div>
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/document-favorite.svg" class="me-2" alt="">
+        <span class="menu-text">Activity</span>
+      </div>
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/user.svg" class="me-2" alt="">
+        <span class="menu-text">Details</span>
+      </div>
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/lock.svg" class="me-2" alt="">
+        <span class="menu-text">Lock</span>
+      </div>
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/2 (2).svg" class="me-2" alt="">
+        <span class="menu-text">Download</span>
+      </div>
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/star.svg" class="me-2" alt="">
+        <span class="menu-text">Add Favorite</span>
+      </div>
+      <div class="menu-item mb-1 pointer">
+        <img src="./assets/trash.svg" class="me-2" alt="">
+        <span class="menu-text">Delete</span>
+      </div>
+    </div>
 
                         </div>
 
@@ -469,13 +691,13 @@
                               alt="user"
                             />
                           </div>
-                          <div>Fouad Mohamed <br />General Manager</div>
+                          <div>Fouad Mohamed <br /><span class="activity-role">General Manager</span></div>
                         </div>
                       </td>
                       <td>
                         <div>12/5/2024 <br />11:00pm</div>
                       </td>
-                      <td>
+                      <td class="px-5">
                         <div>12/5/2024 <br />11:00pm</div>
                       </td>
                        <td>
@@ -494,11 +716,44 @@
                       </td>
 
                       <td >
-                        <div class="d-flex justify-content-between align-items-center">
-                            <button class="status-badge approved border-0">
-                              Approved
+                        <div class="d-flex  align-items-center  position-relative">
+                           <button class="status-badge pending  border-0">
+                              Pending 
                             </button>
-                            <button class="btn-action">⋮</button>
+                           <button class="bg-transparent border-0 ms-4 fw-bol ms-3 toggle-menu-btn">
+            <i class="fa-solid fa-ellipsis-vertical fa-sm"></i>
+                         </button>
+          
+    <div class="sidebar-menu2 bg-white p-3 rounded-3 shadow" style="display: none;" >
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/message-edit.svg" class="me-2" alt="">
+        <span class="menu-text">Rename</span>
+      </div>
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/document-favorite.svg" class="me-2" alt="">
+        <span class="menu-text">Activity</span>
+      </div>
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/user.svg" class="me-2" alt="">
+        <span class="menu-text">Details</span>
+      </div>
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/lock.svg" class="me-2" alt="">
+        <span class="menu-text">Lock</span>
+      </div>
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/2 (2).svg" class="me-2" alt="">
+        <span class="menu-text">Download</span>
+      </div>
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/star.svg" class="me-2" alt="">
+        <span class="menu-text">Add Favorite</span>
+      </div>
+      <div class="menu-item mb-1 pointer">
+        <img src="./assets/trash.svg" class="me-2" alt="">
+        <span class="menu-text">Delete</span>
+      </div>
+    </div>
 
                         </div>
 
@@ -519,13 +774,13 @@
                               alt="user"
                             />
                           </div>
-                          <div>Fouad Mohamed <br />General Manager</div>
+                          <div>Fouad Mohamed <br /><span class="activity-role">General Manager</span></div>
                         </div>
                       </td>
                       <td>
                         <div>12/5/2024 <br />11:00pm</div>
                       </td>
-                      <td>
+                      <td class="px-5">
                         <div>12/5/2024 <br />11:00pm</div>
                       </td>
                        <td>
@@ -543,12 +798,45 @@
                         <div>Desgin, law , science</div>
                       </td>
 
-                      <td >
-                        <div class="d-flex justify-content-between align-items-center">
-                            <button class="status-badge approved border-0">
-                              Approved
+                      <td class="position-relative">
+                        <div class="d-flex align-items-center  ">
+                            <button class="status-badge pending  border-0">
+                              Pending 
                             </button>
-                            <button class="btn-action">⋮</button>
+                           <button class="bg-transparent border-0 ms-4 fw-bol ms-3 toggle-menu-btn">
+            <i class="fa-solid fa-ellipsis-vertical fa-sm"></i>
+                         </button>
+          
+    <div class="sidebar-menu2 bg-white p-3 rounded-3 shadow" style="display: none;" >
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/message-edit.svg" class="me-2" alt="">
+        <span class="menu-text">Rename</span>
+      </div>
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/document-favorite.svg" class="me-2" alt="">
+        <span class="menu-text">Activity</span>
+      </div>
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/user.svg" class="me-2" alt="">
+        <span class="menu-text">Details</span>
+      </div>
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/lock.svg" class="me-2" alt="">
+        <span class="menu-text">Lock</span>
+      </div>
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/2 (2).svg" class="me-2" alt="">
+        <span class="menu-text">Download</span>
+      </div>
+      <div class="menu-item mb-3 pointer">
+        <img src="./assets/star.svg" class="me-2" alt="">
+        <span class="menu-text">Add Favorite</span>
+      </div>
+      <div class="menu-item mb-1 pointer">
+        <img src="./assets/trash.svg" class="me-2" alt="">
+        <span class="menu-text">Delete</span>
+      </div>
+    </div>
 
                         </div>
 
@@ -558,28 +846,114 @@
 
                   </tbody>
                 </table>
-
-                <div class="table-footer ">
-                  <span>Showing Results 2 - 7 of 07</span>
-                  <div class="table-pagination">
-                    <button class="btn-page">
-                      <i class="fa-solid fa-chevron-left"></i> Back
-                    </button>
-                    <span class="page-num active">1</span>
-                    <span class="page-num">2</span>
-                    <span class="page-num">3</span>
-                    <span class="page-num">4</span>
-                    <button class="btn-page">
-                      Next <i class="fa-solid fa-chevron-right"></i>
-                    </button>
-                  </div>
                 </div>
+                </div>
+
+                
               </div>
+               <div class="table-footer">
+                      <span class="d-flex text-black">Showing Results 2 <div
+                            class="sort-toggle d-flex flex-column mx-3"
+                            style="cursor: pointer"
+                          >
+                            <i
+                              class="fas fa-chevron-up text-muted "
+                              style="font-size: 10px"
+                            ></i>
+                            <i
+                              class="fas fa-chevron-down text-muted "
+                              style="font-size: 10px"
+                            ></i>
+                          </div> 7 of 07</span>
+                      <div class="table-pagination">
+                        <button class="btn-page bg-transparent">
+                          <i class="fa-solid fa-chevron-left"></i> Back
+                        </button>
+                        <span class="page-num active">1</span>
+                        <span class="page-num">2</span>
+                        <span class="page-num">3</span>
+                        <span class="page-num">4</span>
+                        <button class="btn-page bg-transparent">
+                          Next <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                      </div>
+                    </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/counter.js"></script>
+    <script src="./js/chart.js"></script>
+    <script src="./js/main.js"></script>
     <script src="./js/pop.js"></script>
+    <script>
+      const tableBody = document.getElementById("filesTableBody");
+
+      document.querySelectorAll(".sort-toggle").forEach((toggle) => {
+        const up = toggle.querySelector(".toggle-up");
+        const down = toggle.querySelector(".toggle-down");
+
+        up.addEventListener("click", () => {
+          tableBody.style.display = "none"; 
+        });
+
+        down.addEventListener("click", () => {
+          tableBody.style.display = ""; 
+        });
+      });
+    </script>
+<script>
+  document.querySelectorAll('.toggle-menu-btn').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      const currentMenu = this.parentElement.querySelector('.sidebar-menu2');
+
+      // اقفل كل القوائم التانية
+      document.querySelectorAll('.sidebar-menu2').forEach(menu => {
+        if (menu !== currentMenu) {
+          menu.classList.remove('show');
+          setTimeout(() => {
+            menu.style.display = 'none';
+          }, 300);
+        }
+      });
+
+      const isVisible = currentMenu.classList.contains('show');
+
+      if (isVisible) {
+        currentMenu.classList.remove('show');
+        setTimeout(() => {
+          currentMenu.style.display = 'none';
+        }, 300);
+      } else {
+        currentMenu.style.display = 'block';
+        setTimeout(() => {
+          currentMenu.classList.add('show');
+        }, 10);
+      }
+    });
+  });
+
+
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.sidebar-menu2').forEach(menu => {
+      if (menu.classList.contains('show')) {
+        menu.classList.remove('show');
+        setTimeout(() => {
+          menu.style.display = 'none';
+        }, 300);
+      }
+    });
+  });
+</script>
+<script>
+  document.getElementById('toggleSidebar').addEventListener('click', function () {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('collapsed');
+  });
+</script>
+
   </body>
 </html>
