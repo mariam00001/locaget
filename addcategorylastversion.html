@@ -248,24 +248,29 @@
                 <div class="">
                     <div class="card-body">
                         <form id="categoryForm">
-                            <div class="mb-3">
+                            <div class="mb-3 d-flex" >
                                 <input type="text" class="form-control custom-input" id="categoryInput" placeholder="Software">
+                                 <img src="./assets/Depth 6, Frame 11.svg" class="ms-4" alt="">
                             </div>
 
                             <div class="subcategory-section">
                                 <div class="subcategory-visual-container">
                                     <div class="subcategory-container bg-ver">
-                                        <div class="subcategory-item mb-3">
-                                            <input type="text" class="form-control custom-input" placeholder="Programming ">
+                                        <div class="subcategory-item mb-3 d-flex">
+                                            <input type="text" class="form-control custom-input" placeholder="Programming " readonly>
+                                            <img src="./assets/Depth 6, Frame 11.svg" class="ms-4" alt="">
                                         </div>
-                                        <div class="subcategory-item mb-3">
-                                            <input type="text" class="form-control custom-input" placeholder="UI/UX ">
+                                        <div class="subcategory-item mb-3 d-flex">
+                                            <input type="text" class="form-control custom-input" placeholder="UI/UX " readonly>
+                                             <img src="./assets/Depth 6, Frame 11.svg" class="ms-4" alt="">
                                         </div>
-                                         <div class="subcategory-item mb-3">
-                                            <input type="text" class="form-control custom-input" placeholder="testing ">
+                                         <div class="subcategory-item mb-3 d-flex">
+                                            <input type="text" class="form-control custom-input" placeholder="testing " readonly>
+                                             <img src="./assets/Depth 6, Frame 11.svg" class="ms-4" alt="">
                                         </div>
-                                         <div class="subcategory-item mb-3">
-                                            <input type="text" class="form-control custom-input" placeholder="Programming ">
+                                         <div class="subcategory-item mb-3 d-flex">
+                                            <input type="text" class="form-control custom-input" placeholder="Programming " readonly>
+                                             <img src="./assets/Depth 6, Frame 11.svg" class="ms-4" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -290,5 +295,29 @@
     sidebar.classList.toggle('collapsed');
   });
 </script>
+<script>
+  // بعد تحميل الصفحة
+  window.addEventListener('DOMContentLoaded', function () {
+    // لكل عنصر فيه input و img
+    document.querySelectorAll('.subcategory-item').forEach(function (item) {
+      const input = item.querySelector('input');
+      const img = item.querySelector('img');
+
+      if (input && img) {
+        img.addEventListener('click', function () {
+          // لما يدوس على الصورة
+          if (input.hasAttribute('readonly')) {
+            input.removeAttribute('readonly'); // شيل readonly
+            input.value = input.placeholder;   // حط البليس هولدر كـ value
+            input.focus();                     // ركز المؤشر
+          }
+        });
+      }
+    });
+  });
+</script>
+
+
+
   </body>
 </html>

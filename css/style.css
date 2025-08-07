@@ -981,10 +981,6 @@ border: 0.2px solid #858D9D;
   background-color: #007bff;
 }
 
-.file-name {
-  font-weight: 500;
-  color: #1a202c;
-}
 
 .file-date {
   font-size: 12px;
@@ -996,8 +992,10 @@ border: 0.2px solid #858D9D;
 .status-badge {
   padding: 4px 12px;
   border-radius: 13px;
-  font-size: 12px;
-  font-weight: 500;
+font-size: 16.21px;
+line-height: 23.16px;
+letter-spacing: 0px;
+color: #2A2A2E;
 }
 
 .status-badge.approved {
@@ -1016,11 +1014,16 @@ border: 0.2px solid #858D9D;
 }
 
 .btn-action {
-  padding: 4px 8px;
-  border: 1px solid #e6e6e6;
-  background-color: #e6e6e6;
-  border-radius: 4px;
-  font-size: 12px;
+  padding: 4px 12px;
+  border: 1px solid #E6E6E6;
+  background-color: #E6E6E6;
+  border-radius: 10px;
+font-weight: 400;
+
+font-size: 16px;
+line-height: 22.42px;
+letter-spacing: 0px;
+
   cursor: pointer;
   color: #2a2a2e;
   transition: all 0.3s ease;
@@ -2896,4 +2899,16 @@ line-height: 24px;
 letter-spacing: 0px;
 text-align: center;
 color: #0F1417;
+}
+.files-table th{
+font-weight: 600;
+font-style: Semi Bold;
+font-size: 16px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+color: #9E9E9E !important;
+}
+.files-table .fa-chevron-up , .files-table .fa-chevron-down {
+  color: #6E6D6D !important;
 }

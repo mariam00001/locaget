@@ -98,7 +98,7 @@ function renderFilesTable() {
       </td>
       <td>
         <div class="file-actions d-flex justify-content-center position-relative">
-          <button class="btn-action">Details</button>
+          <button class="btn-action me-2">Details</button>
           <button class="btn-action">Edit</button>
           <button class="bg-transparent border-0 fw-bol ms-3 toggle-menu-btn2">
             <i class="fa-solid fa-ellipsis-vertical fa-sm"></i>
