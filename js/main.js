@@ -55,6 +55,90 @@ const filesData = [
     date: '3/5/2024',
     time: '11:00pm',
     status: 'pending'
+  },
+    {
+    id: 8,
+    name: 'File name',
+    type: 'word',
+    date: '3/5/2024',
+    time: '11:00pm',
+    status: 'pending'
+  }
+  ,
+    {
+    id: 9,
+    name: 'File name',
+    type: 'word',
+    date: '3/5/2024',
+    time: '11:00pm',
+    status: 'pending'
+  },
+  {
+    id: 10,
+    name: 'File name',
+    type: 'word',
+    date: '3/5/2024',
+    time: '11:00pm',
+    status: 'pending'
+  }
+  ,
+    {
+    id: 11,
+    name: 'File name',
+    type: 'word',
+    date: '3/5/2024',
+    time: '11:00pm',
+    status: 'pending'
+  },
+    {
+    id: 12,
+    name: 'File name',
+    type: 'pdf',
+    date: '3/5/2024',
+    time: '11:00pm',
+    status: 'pending'
+  },
+  {
+    id: 13,
+    name: 'File name',
+    type: 'word',
+    date: '3/5/2024',
+    time: '11:00pm',
+    status: 'pending'
+  },
+    {
+    id: 14,
+    name: 'File name',
+    type: 'word',
+    date: '3/5/2024',
+    time: '11:00pm',
+    status: 'pending'
+  }
+  ,
+    {
+    id: 15,
+    name: 'File name',
+    type: 'word',
+    date: '3/5/2024',
+    time: '11:00pm',
+    status: 'pending'
+  },
+  {
+    id: 16,
+    name: 'File name',
+    type: 'word',
+    date: '3/5/2024',
+    time: '11:00pm',
+    status: 'pending'
+  }
+  ,
+    {
+    id: 17,
+    name: 'File name',
+    type: 'word',
+    date: '3/5/2024',
+    time: '11:00pm',
+    status: 'pending'
   }
 ];
 
@@ -68,11 +152,21 @@ function getFileIcon(type) {
   return icons[type] || '<i class="fas fa-file"></i>';
 }
 
-// Function to render files table
+// Pagination variables
+let currentPage = 1;
+const rowsPerPage = 7;
+
+// Function to render files table with pagination
 function renderFilesTable() {
   const tbody = document.getElementById('filesTableBody');
 
-  tbody.innerHTML = filesData.map(file => `
+
+  const start = (currentPage - 1) * rowsPerPage;
+  const end = start + rowsPerPage;
+  const paginatedData = filesData.slice(start, end);
+
+  // عرض البيانات
+  tbody.innerHTML = paginatedData.map(file => `
     <tr>
       <td>
         <div class="file-item ms-3">
@@ -139,33 +233,42 @@ function renderFilesTable() {
     </tr>
   `).join('');
 
-  // Add click listeners to toggle buttons (⋮) after rendering
-  const toggleButtons = document.querySelectorAll('.toggle-menu-btn2');
-
-  toggleButtons.forEach((btn) => {
-    btn.addEventListener('click', function (e) {
-      e.stopPropagation();
-
-      // Close all other menus
-      document.querySelectorAll('.sidebar-menu2').forEach(menu => {
-        if (menu !== this.nextElementSibling) {
-          menu.style.display = 'none';
-        }
-      });
-
-      // Toggle current menu
-      const menu = this.nextElementSibling;
-      menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
-    });
-  });
-
-  // Prevent closing menu when clicked inside it
-  document.querySelectorAll('.sidebar-menu2').forEach(menu => {
-    menu.addEventListener('click', function (e) {
-      e.stopPropagation();
-    });
-  });
+  // تحديث الباجينيشن
+  renderPagination();
 }
+
+// Function to render pagination buttons
+function renderPagination() {
+  const paginationContainer = document.querySelector('.table-pagination');
+  const totalPages = Math.ceil(filesData.length / rowsPerPage);
+
+  let paginationHTML = `
+    <button class="btn-page bg-transparent" ${currentPage === 1 ? 'disabled' : ''} onclick="changePage(currentPage - 1)">
+      <i class="fa-solid fa-chevron-left"></i> Back
+    </button>
+  `;
+
+  for (let i = 1; i <= totalPages; i++) {
+    paginationHTML += `<span class="page-num ${i === currentPage ? 'active' : ''}" onclick="changePage(${i})">${i}</span>`;
+  }
+
+  paginationHTML += `
+    <button class="btn-page bg-transparent" ${currentPage === totalPages ? 'disabled' : ''} onclick="changePage(currentPage + 1)">
+      Next <i class="fa-solid fa-chevron-right"></i>
+    </button>
+  `;
+
+  paginationContainer.innerHTML = paginationHTML;
+}
+
+// Function to change page
+function changePage(page) {
+  currentPage = page;
+  renderFilesTable();
+}
+
+
+renderFilesTable();
 
 
 // Function to create approval chart
