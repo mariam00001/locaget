@@ -183,7 +183,7 @@ function renderFilesTable() {
         </div>
       </td>
       <td>
-        <div class="file-date">${file.date}<br>${file.time}</div>
+        <p class="file-date text-center">${file.date}<br>${file.time}</p>
       </td>
       <td class="text-center marg-aprove">
         <span class="status-badge ${file.status}">

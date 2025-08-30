@@ -25,9 +25,7 @@ function closePrompt3() {
   document.getElementById("promptLayer3").classList.add("d-none");
 }
 
-document.querySelectorAll(".btn-ok").forEach(el =>
-  el.addEventListener("click", closePrompt)
-);
+
 document.querySelectorAll(".btn-cancel").forEach(el =>
   el.addEventListener("click", closePrompt)
 );

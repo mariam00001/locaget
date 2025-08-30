@@ -1,3 +1,9 @@
+/* @media (max-width: 1200px){
+.table-controls {
+  display: block;
+  width: 50%;
+}
+} */
 @media (max-width: 1024px) {
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -10,6 +16,7 @@
     font-size: 14px;
     background-color: #f8f9fa;
   }
+
 }
 @media (max-width: 768px) {
   #sidebar {

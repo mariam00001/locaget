@@ -20,7 +20,7 @@
                     <td>Room ${loc.room}</td>
                     <td class="padding-left">Shelf ${loc.shelf}</td>
                     <td>Row ${loc.row}</td>
-                    <td><button class="btn-delete w-50" onclick="deleteLocation(${index})">Delete</button></td>
+                    <td class=" d-flex justify-content-center"><button class="btn-delete w-50" onclick="deleteLocation(${index})">Delete</button></td>
                 `;
                 locationTableBody.appendChild(row);
             });

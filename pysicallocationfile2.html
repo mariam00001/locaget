@@ -202,14 +202,17 @@
               </header>
           <div class="addtag  mt-5 position-relative ">
  <h3>Physical file location</h3>
- <div class="row add-role">
+ <div class="row add-role mt-5">
     <div class="col-md-4">
+        <label for="" class="mb-2">Room</label>
          <input type="number" id="roomInput" class="form-control" placeholder="Room">
     </div>
       <div class="col-md-4">
+          <label for="" class="mb-2">Shelf </label>
                  <input type="number" id="shelfInput" class="form-control" placeholder="Shelf">
     </div>
       <div class="col-md-4">
+         <label for="" class="mb-2">Row</label>
            <input type="number" id="rowInput" class="form-control" placeholder="Row">
     </div>
  </div>
@@ -221,11 +224,11 @@
     <div class="audience-table-container w-75 pysical  ">
         <table class="table table-hover custom-transparent-table2 align-middle audience-table  ">
             <thead >
-                <tr >
+                <tr  class="tabel-color">
                     <th  class="email">Room</th>
                     <th class="padding-left">Shelf</th>
                     <th>Row</th>
-                    <th>Action</th>
+                    <th class="text-center">Action</th>
                 </tr>
             </thead>
             <tbody id="locationTableBody"></tbody>

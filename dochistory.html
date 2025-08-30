@@ -208,33 +208,26 @@
            <button class="close-btn"><a href="./index.html" class="text-decoration-none text-muted"><i class="fa-solid fa-x me-2"></i>close</a></button>
       </div>
       </div>
-              <div class="files-table-container  ">
-                <div class="table-controls position-relative px-5 px-md-0 ">
-                  <div class="search-box me-5">
-                  <i class="fas fa-search d-none d-md-flex"></i>
+        <div class="row position-relative  px-md-0 mb-3 ">
+                  <div class="col-lg-6 col-md-12">                  <div class="search-box me-5">
+                  <i class="fas fa-search d-none d-lg-flex"></i>
                   <input type="text" placeholder="Search documents, people, tags..." />
-                </div>
-                  <table class="table-filters   ">
-                       <!-- <select class="form-select">
-                      <option></option>
-                      <option>Approved</option>
-                      <option>Pending</option>
-                      <option>Rejected</option>
-                    </select> -->
-                    <button class="btn-show bg-transparent border text-muted ms-5">Show favorites</button>
-                     <select class="form-select border text-muted ">
+                 </div></div>
+<div class="col-lg-6 col-md-12 d-lg-flex justify-content-between align-items-center">
+                    <button class="btn-show bg-transparent border text-muted me-2  mb-2">Show favorites</button>
+                     <select class="form-select border text-muted mb-2 me-2">
                           <option>Status</option>
                           <option>Approved</option>
                           <option>Pending</option>
                           <option>Rejected</option>
                         </select>
-                        <select class="form-select border text-muted">
+                        <select class="form-select border text-muted mb-2 me-2">
                           <option>File Type</option>
                           <option>PDF</option>
                           <option>DOC</option>
                           <option>XLS</option>
                         </select>
-                  <div class="custom-date ">
+                  <div class="custom-date me-2 ">
   <input type="date" id="dateInput" />
   <div class="date-display border text-muted">
     <span id="dateText">Date</span>
@@ -243,9 +236,12 @@
 </div>
                       <button class="btn border  p-2 text-muted">
     <img src="./assets/setting-4.svg" alt="">
-  </button>
-                  </table>
+                 </button>
+                 </div>
+
                 </div>
+              <div class="files-table-container  ">
+              
 
   <div class="table-wrapper rounded-3 border overflow-hidden ">
                 <table class="files-table doc-table bg-white ">
@@ -261,7 +257,7 @@
                       <th class="text-center">Status</th>
                     </tr>
                   </thead>
-                  <tbody id="filesTableBody">
+                  <tbody >
                     <tr>
                       <td>
                         <div>

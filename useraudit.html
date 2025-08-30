@@ -7,6 +7,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
     <link rel="stylesheet" href="./css/all.min.css" />
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
@@ -226,15 +227,13 @@
               </div>
 
               <div class="d-md-flex justify-content-end my-3">
-                <div class="d-flex align-items-center gap-2">
-                  <!-- Date Picker -->
-                  <button
-                    class="btn border px-3 py-2 d-flex align-items-center gap-2 text-muted"
-                  >
-                    <i class="fas fa-calendar-alt"></i>
-                    <span>25/5/2025 - Today</span>
-                    <i class="fas fa-chevron-down"></i>
-                  </button>
+                <div class="d-flex align-items-center gap-2 position-relative">
+                 <!-- Date Picker -->
+<button id="singleDateBtn" class="btn border px-3 py-2 d-flex align-items-center gap-2 text-muted">
+  <i class="fas fa-calendar-alt"></i>
+  <span id="singleDateText">01/08/2025</span>
+  <i class="fas fa-chevron-down"></i>
+</button>
 
                   <!-- Filter Icon Button -->
                   <button class="btn border p-2 text-muted">
@@ -928,6 +927,22 @@
     <script src="./js/chart.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/pop.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<script>
+  $(function () {
+    $('#singleDateBtn').daterangepicker({
+      singleDatePicker: true,
+      showDropdowns: true,
+      locale: {
+        format: 'DD/MM/YYYY'
+      }
+    }, function (chosen_date) {
+      $('#singleDateText').text(chosen_date.format('DD/MM/YYYY'));
+    });
+  });
+</script>
     <script>
       const tableBody = document.getElementById("filesTableBody");
 

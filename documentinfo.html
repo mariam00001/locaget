@@ -7,6 +7,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css"/>
     <link rel="stylesheet" href="./css/all.min.css" />
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
@@ -258,15 +259,13 @@
           <label class="form-label">Position<span class="text-danger">*</span></label>
           <input type="text" class="form-control" placeholder="Account manager" />
         </div>
-        <div class="col-md-4 mb-4">
-          <label class="form-label">Phone Number<span class="text-danger">*</span></label>
-          <div class="input-group">
-            <span class="input-group-text">
-              <img src="https://flagcdn.com/w40/eg.png" width="20" height="14" alt="EG" />
-            </span>
-            <input type="text" class="form-control" placeholder="02+" />
-          </div>
-        </div>
+<div class="col-md-4 mb-4 ">
+  <label for="phone" class="form-label d-block">
+    Phone Number <span class="text-danger">*</span>
+  </label>
+  <input id="phone" type="tel" class="form-control w-100" placeholder="+20"/>
+</div>
+
 
         <div class="col-md-4 mb-4">
           <label class="form-label">Email<span class="text-danger">*</span></label>
@@ -295,7 +294,7 @@
                 <div class="d-flex justify-content-center mb-2">
                 <img src="./assets/Frame 2078547852.svg" alt="">
                 </div>
-                <h3>Please complete all required fields ?</h3>
+                <h3>Please complete all required fields</h3>
                 <p>Some required fields are missing</p>
                 <button class="btn-ok">ok</button>
 
@@ -310,6 +309,16 @@
 
     <script src="./js/upload.js"></script>
     <script src="./js/pop.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput.min.js"></script>
+<script>
+  
+  const input = document.querySelector("#phone");
+  window.intlTelInput(input, {
+    initialCountry: "eg", 
+    preferredCountries: ["eg", "us", "gb", "ae"], 
+    separateDialCode: true, 
+  });
+</script>
         <script>
   document.getElementById('toggleSidebar').addEventListener('click', function () {
     const sidebar = document.getElementById('sidebar');

@@ -54,13 +54,13 @@
     <div class="col">
       <div class="input-group">
         <input type="text" id="startDate" class="form-control" placeholder="Start Date">
-        <span class="input-group-text"><i class="bi bi-calendar"></i></span>
+        <span class="input-group-text bg-transparent"><img src="./assets/calendar.svg" class="w-100" alt=""></span>
       </div>
     </div>
     <div class="col">
       <div class="input-group">
         <input type="text" id="endDate" class="form-control" placeholder="End Date">
-        <span class="input-group-text"><i class="bi bi-calendar"></i></span>
+        <span class="input-group-text bg-transparent"><img src="./assets/calendar.svg" class="w-100" alt=""></span>
       </div>
     </div>
   </div>
@@ -72,13 +72,13 @@
     <div class="col">
       <div class="input-group">
         <input type="text" id="startDate" class="form-control" placeholder="Start Date">
-        <span class="input-group-text"><i class="bi bi-calendar"></i></span>
+        <span class="input-group-text bg-transparent"><img src="./assets/calendar.svg" class="w-100" alt=""></span>
       </div>
     </div>
     <div class="col">
       <div class="input-group">
         <input type="text" id="endDate" class="form-control" placeholder="End Date">
-        <span class="input-group-text"><i class="bi bi-calendar"></i></span>
+        <span class="input-group-text bg-transparent"><img src="./assets/calendar.svg" class="w-100" alt=""></span>
       </div>
     </div>
   </div>
@@ -99,15 +99,13 @@
   <div class=" mt-4">
     <label class="form-label mb-0">Favorites only</label>
     <div class="active-font gap-2 mt-2">
-    <div class="switch-container position-relative">
-      <input type="checkbox" id="ocr-toggle" checked hidden>
-      <label class="switch-label" for="ocr-toggle">
-        <h3 class="mt-2 me-5">
-          <span id="switch-text">ON</span>
-        </h3>
-      </label>
-      
-    </div>
+  <div class="switch-container position-relative overflow-hidden">
+    <input type="checkbox" id="ocr-toggle" checked hidden>
+    <label class="switch-label" for="ocr-toggle">
+      <h3 class="mt-2 me-5">
+        <span id="switch-text">ON</span>
+      </h3>
+    </label>
   </div>
   </div>
 
@@ -133,5 +131,22 @@
     dateFormat: "Y-m-d"
   });
 </script>
+<script>
+const toggle = document.getElementById("ocr-toggle");
+const switchText = document.getElementById("switch-text");
+
+function updateText() {
+  if (toggle.checked) {
+    switchText.textContent = "ON";
+  } else {
+    switchText.textContent = "OFF";
+  }
+}
+
+toggle.addEventListener("change", updateText);
+
+updateText();
+</script>
+
 </body>
 </html>

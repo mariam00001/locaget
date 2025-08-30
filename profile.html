@@ -7,6 +7,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css"/>
     <link rel="stylesheet" href="./css/all.min.css" />
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
@@ -213,11 +214,15 @@
     </div>
     <div class="profile-pic d-flex justify-content-center align-items-center">
       <img src="./assets/1196466b06600ac82d6dee064261a1ccc87b17f9.jpg" class="img-fluid" alt="profile-pic">
+      
     </div>
+        <img src="./assets/Frame 2078547947.svg" class="position-absolute profile-edite" alt="">
+   
   </div>
 
   <!-- Name + Position -->
-  <div class="text-center mb-4 mt-2">
+  <div class="text-center mb-4 mt-2 position-relative">
+
     <h6 class="mb-1 fw-semibold">Ahmed Salem</h6>
     <p class="text-muted mb-0">Account Manager</p>
   </div>
@@ -233,27 +238,27 @@
     </div>
     <div class="row">
       <div class="col-md-6 ">
-        <div class="label mb-3">First Name</div>
+        <div class="label mb-2">First Name</div>
         <div class="value">Ahmed</div>
       </div>
-      <div class="col-md-6 mb-3">
-        <div class="label mb-3">Last Name</div>
+      <div class="col-md-6 mb-4">
+        <div class="label mb-2">Last Name</div>
         <div class="value">Salem</div>
       </div>
-      <div class="col-md-6 mb-3">
-        <div class="label mb-3">Email Address</div>
+      <div class="col-md-6 mb-5">
+        <div class="label mb-2">Email Address</div>
         <div class="value">Ahmed235@gmail.com</div>
       </div>
-      <div class="col-md-6 mb-3">
-        <div class="label mb-3">Phone</div>
+      <div class="col-md-6 mb-4">
+        <div class="label mb-2">Phone</div>
         <div class="value">+201015335677</div>
       </div>
-      <div class="col-md-6 mb-3 ">
-        <div class="label mb-3">Position</div>
+      <div class="col-md-6 mb-4 ">
+        <div class="label mb-2">Position</div>
         <div class="value">Account Manager</div>
       </div>
-      <div class="col-md-6 mb-3 ">
-        <div class="label mb-3">Password</div>
+      <div class="col-md-6 ">
+        <div class="label mb-2">Password</div>
         <div class="value">******** <br><a href="#" class="text-primary text-decoration-none" style="font-size: 0.9rem;" id="nextBtn3">Change password</a></div>
       </div>
     </div>
@@ -292,7 +297,7 @@
  <div class="layer position-absolute d-none" id="promptLayer">
               <div class="profile-edit-box">
 
-    <div class="header">
+    <div class="header bg-transparent">
       <span>Edit Personal information</span>
 <button class="exit" id="exitProfileBtn" style="background: none; border: none;">
   <i class="fa-solid fa-xmark"></i>
@@ -321,10 +326,7 @@
       <div class="mb-3">
         <label class="form-label">Phone Number</label>
         <div class="input-group">
-          <span class="input-group-text bg-white">
-            <img src="https://flagcdn.com/w40/eg.png" alt="EG Flag">
-          </span>
-          <input type="text" class="form-control" placeholder="02+">
+          <input id="phone" type="text" class="form-control phone-input" placeholder="02+">
         </div>
       </div>
 
@@ -348,8 +350,8 @@
              <div class="layer position-absolute d-none" id="promptLayer2">
               <div class="profile-edit-box">
 
-    <div class="header">
-      <span>Edit Personal information</span>
+    <div class=" bg-transparent mb-3 d-flex justify-content-lg-between">
+      <span >Edit Personal information</span>
 <button class="exit" id="exitProfileBtn2" style="background: none; border: none;">
   <i class="fa-solid fa-xmark"></i>
 </button>
@@ -362,10 +364,7 @@
       <div class="mb-3 ">
         <label class="form-label">Country</label>
         <div class="input-group">
-          <span class="input-group-text bg-white">
-            <img src="https://flagcdn.com/w40/eg.png" alt="EG Flag">
-          </span>
-          <input type="text" class="form-control" placeholder="02+">
+          <input id="phone" type="text" class="form-control phone-input" placeholder="02+">
         </div>
       </div>
 
@@ -448,6 +447,20 @@
       <script src="./js/upload.js"></script>
     <script src="./js/pop.js"></script>
     <script src="./js/prompet.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput.min.js"></script>
+<script>
+  
+const phoneInputs = document.querySelectorAll(".phone-input");
+
+phoneInputs.forEach(input => {
+  window.intlTelInput(input, {
+    initialCountry: "eg",
+    preferredCountries: ["eg", "us", "gb", "ae"],
+    separateDialCode: true,
+  });
+});
+
+</script>
             <script>
       document.getElementById("exitProfileBtn")?.addEventListener("click", function () {
   document.getElementById("promptLayer").classList.add("d-none");
@@ -467,6 +480,22 @@
     const sidebar = document.getElementById('sidebar');
     sidebar.classList.toggle('collapsed');
   });
+  document.querySelectorAll(".toggle-password").forEach(icon => {
+  icon.addEventListener("click", function () {
+    const input = document.getElementById(this.dataset.target);
+
+    if (input.type === "password") {
+      input.type = "text";
+      this.classList.remove("fa-eye-slash");
+      this.classList.add("fa-eye");
+    } else {
+      input.type = "password";
+      this.classList.remove("fa-eye");
+      this.classList.add("fa-eye-slash");
+    }
+  });
+});
+
 </script>
   </body>
 </html>
