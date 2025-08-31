@@ -2037,6 +2037,7 @@ background-color: transparent;
   margin-left: 20px;
   padding-bottom: 10px;
   border-bottom: 2px solid #6e6d6d;
+  margin-bottom: 0px !important;
 }
 .notification-info a {
   font-weight: 700;
@@ -3129,7 +3130,7 @@ color: #9E9E9E !important;
   border-radius: 30px;
   cursor: pointer;
   transition: all 0.3s ease;
-  padding: 0 0.75rem;  
+  padding: 0 0.55rem;  
 }
 
 .switch-container input:not(:checked) + .switch-label {
@@ -3212,4 +3213,20 @@ text-align: center;
 
 .collapse.show + tr .toggle-icon::after {
   content: "−";
+}
+.text-pagnation{
+  color: #9E9E9E  !important;
+font-weight: 600;
+font-style: Semi Bold;
+font-size: 16.21px;
+leading-trim: NONE;
+line-height: 16.21px;
+letter-spacing: 0px;
+
+}
+.border1{
+  border-bottom: 1px solid #CFDBE8 !important;
+  position: absolute;
+  
+
 }

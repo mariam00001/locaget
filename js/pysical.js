@@ -5,11 +5,11 @@
         const locationTableBody = document.getElementById('locationTableBody');
 
         const locations = [
-            {room: 1, shelf: 3, row: 5},
-            {room: 2, shelf: 4, row: 5},
-            {room: 3, shelf: 5, row: 5},
-            {room: 4, shelf: 6, row: 5},
-            {room: 5, shelf: 7, row: 5}
+            {room: 1, shelf: 3, row: 5 , location : 1},
+            {room: 2, shelf: 4, row: 5 , location : 1},
+            {room: 3, shelf: 5, row: 5 , location : 1},
+            {room: 4, shelf: 6, row: 5 , location : 1},
+            {room: 5, shelf: 7, row: 5 , location : 1}
         ];
 
         function renderLocations() {
@@ -20,6 +20,7 @@
                     <td>Room ${loc.room}</td>
                     <td class="padding-left">Shelf ${loc.shelf}</td>
                     <td>Row ${loc.row}</td>
+                     <td>Row ${loc.location}</td>
                     <td class=" d-flex justify-content-center"><button class="btn-delete w-50" onclick="deleteLocation(${index})">Delete</button></td>
                 `;
                 locationTableBody.appendChild(row);

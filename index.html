@@ -492,86 +492,58 @@
                     <!-- Right Column -->
                     <div class="card border-0 categories-section p-4 h-100">
                      
-
-                      <div class="row ">
-                        <div class="col-md-9">
-                           <div
-                        class="d-flex  align-items-start flex-wrap mb-5"
-                      >
-                        <div>
-                          <p class="text-muted mb-1 fw-semibold">Statistics</p>
-                          <h5 class="fw-bold">Summary of Approvals</h5>
-                        </div>
-<div class="btn-group mb-2 ms-3" id="chartFilters">
-  <button class="me-4" data-type="weekly">Weekly</button>
-  <button class="me-4 button-active" data-type="monthly">Monthly</button>
-  <button data-type="yearly">Yearly</button>
+<div class="row ">
+  <div class="col-md-9">
+    <div class="d-flex  align-items-start flex-wrap mb-5">
+      <div>
+        <p class="text-muted mb-1 fw-semibold">Statistics</p>
+        <h5 class="fw-bold">Summary of Approvals</h5>
+      </div>
+      <div class="btn-group mb-2 ms-3" id="chartFilters">
+        <button class="me-4" data-type="weekly">Weekly</button>
+        <button class="me-4 button-active" data-type="monthly">Monthly</button>
+        <button data-type="yearly">Yearly</button>
+      </div>
+    </div>
+    <div style="width: 100%; height: 300px;">
+      <canvas id="approvalChart"></canvas>
+    </div>
+  </div>
+  <div class="col-md-3 d-flex align-items-center ">
+    <div class="border-chart ps-2 d-flex align-items-center">
+      <div class="">
+        <div class="border border-black rounded-pill px-3 py-2 d-inline-block mb-2">
+          <i class="bi bi-circle-fill text-secondary me-1" style="font-size: 0.6rem"></i>
+          <span class="bg-black rounded-circle d-inline-block" style="width: 12px; height: 12px"></span>
+          All Status
+        </div>
+        <ul class="list-unstyled mt-3">
+          <li class="d-flex justify-content-between align-items-center mb-2">
+            <div class="d-flex align-items-center gap-2">
+              <span class="bg-success rounded-circle d-inline-block" style="width: 10px; height: 10px"></span>
+              <span>Approved</span>
+            </div>
+            <span class="fw-semibold" id="approvedCount">- 37</span>
+          </li>
+          <li class="d-flex justify-content-between align-items-center mb-2">
+            <div class="d-flex align-items-center gap-2">
+              <span class="bg-warning rounded-circle d-inline-block" style="width: 10px; height: 10px"></span>
+              <span>Pending</span>
+            </div>
+            <span class="fw-semibold" id="pendingCount">- 40</span>
+          </li>
+          <li class="d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-2">
+              <span class="bg-danger rounded-circle d-inline-block" style="width: 10px; height: 10px"></span>
+              <span>Rejected</span>
+            </div>
+            <span class="fw-semibold" id="rejectedCount">- 23</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>
-
-
-                      </div>
-                          <div style="width: 100%; height: 300px;" >
-                            <canvas id="approvalChart"></canvas>
-                          </div>
-                        </div>
-                        <div class="col-md-3 d-flex align-items-center ">
-                          <div class="border-chart ps-2 d-flex align-items-center">
-                            <div class="">
-                          <div
-                            class="border border-black rounded-pill px-3 py-2 d-inline-block mb-2"
-                          >
-                            <i
-                              class="bi bi-circle-fill text-secondary me-1"
-                              style="font-size: 0.6rem"
-                            ></i>
-                             <span
-                                  class="bg-black rounded-circle d-inline-block"
-                                  style="width: 12px; height: 12px"
-                                ></span>
-                            All Status
-                          </div>
-                          <ul class="list-unstyled mt-3">
-                            <li
-                              class="d-flex justify-content-between align-items-center mb-2"
-                            >
-                              <div class="d-flex align-items-center gap-2">
-                                <span
-                                  class="bg-success rounded-circle d-inline-block"
-                                  style="width: 10px; height: 10px"
-                                ></span>
-                                <span>Approved</span>
-                              </div>
-                              <span class="fw-semibold">- 37</span>
-                            </li>
-                            <li
-                              class="d-flex justify-content-between align-items-center mb-2"
-                            >
-                              <div class="d-flex align-items-center gap-2">
-                                <span
-                                  class="bg-warning rounded-circle d-inline-block"
-                                  style="width: 10px; height: 10px"
-                                ></span>
-                                <span>Pending</span>
-                              </div>
-                              <span class="fw-semibold">- 40</span>
-                            </li>
-                            <li
-                              class="d-flex justify-content-between align-items-center"
-                            >
-                              <div class="d-flex align-items-center gap-2">
-                                <span
-                                  class="bg-danger rounded-circle d-inline-block"
-                                  style="width: 10px; height: 10px"
-                                ></span>
-                                <span>Rejected</span>
-                              </div>
-                              <span class="fw-semibold">- 23</span>
-                            </li>
-                          </ul>
-                          </div>
-                          </div>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -598,9 +570,12 @@
                         ></i>
                         Export
                       </button>
-                      <button class="btn-upload">
-                        <i class="fas fa-plus"></i> Upload Documents
-                      </button>
+                    <button id="uploadBtn" class="btn-upload">
+  <i class="fas fa-plus"></i> Upload Documents
+</button>
+
+<input type="file" id="fileInput" hidden multiple>
+
                     </div>
                   </div>
                   <div class=" bg-white rounded-3">
@@ -721,14 +696,17 @@
                           </div> 7 of 07</span>
                       <div class="table-pagination">
                         <button class="btn-page bg-transparent">
-                          <i class="fa-solid fa-chevron-left"></i> Back
+                          <a href="">                          <i class="fa-solid fa-chevron-left"></i> Back</a>
+
                         </button>
                         <span class="page-num active">1</span>
                         <span class="page-num">2</span>
                         <span class="page-num">3</span>
                         <span class="page-num">4</span>
                         <button class="btn-page bg-transparent">
+                          <a href="">
                           Next <i class="fa-solid fa-chevron-right"></i>
+                          </a>
                         </button>
                       </div>
                     </div>
@@ -833,8 +811,75 @@ document.addEventListener("click", function (event) {
       });
     </script>
 <script>
+  document.getElementById("uploadBtn").addEventListener("click", function() {
+  document.getElementById("fileInput").click();
+});
+
+document.getElementById("fileInput").addEventListener("change", function() {
+  if (this.files.length > 0) {
+    alert(this.files.length + " file(s) selected");
+  }
+});
+
 
 </script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // البيانات لكل فلتر
+    const chartDatasets = {
+      weekly:  [12, 8, 5],
+      monthly: [37, 40, 23],
+      yearly:  [120, 90, 45]
+    };
+
+    // تعريف بيانات الرسم البياني
+    const chartData = {
+      labels: ["Approved", "Pending", "Rejected"],
+      datasets: [{
+        data: chartDatasets.monthly,
+        backgroundColor: ["#198754", "#ffc107", "#dc3545"]
+      }]
+    };
+
+    // رسم الـ chart
+    const approvalChart = new Chart(
+      document.getElementById("approvalChart"),
+      { type: "doughnut", data: chartData, options: { responsive: true, plugins: { legend: { display: false } } } }
+    );
+
+    // تحديث الأرقام اللي في All Status
+    function updateStatusCounts(dataArr) {
+      document.getElementById("approvedCount").textContent = "- " + dataArr[0];
+      document.getElementById("pendingCount").textContent  = "- " + dataArr[1];
+      document.getElementById("rejectedCount").textContent = "- " + dataArr[2];
+    }
+
+    // أول تحميل → Monthly
+    updateStatusCounts(chartDatasets.monthly);
+
+    // عند الضغط على أي زر Weekly / Monthly / Yearly
+    document.querySelectorAll("#chartFilters button").forEach(btn => {
+      btn.addEventListener("click", function() {
+        let type = this.getAttribute("data-type");
+        let newData = chartDatasets[type];
+
+        // تحديث الرسم البياني
+        approvalChart.data.datasets[0].data = newData;
+        approvalChart.update();
+
+        // تحديث الأرقام في All Status
+        updateStatusCounts(newData);
+
+        // تفعيل الزر المختار
+        document.querySelectorAll("#chartFilters button").forEach(b => b.classList.remove("button-active"));
+        this.classList.add("button-active");
+      });
+    });
+  });
+</script>
+
+
+
 
   </body>
 </html>
